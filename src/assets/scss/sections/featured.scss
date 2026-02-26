@@ -1,0 +1,85 @@
+@use "../mixins" as *;
+
+.featured {
+  margin-top: 180px;
+
+  @include width-tab {
+    margin-top: 120px;
+  }
+
+  &__cards {
+    margin-top: 60px;
+    display: grid;
+    grid-template: repeat(3, 1fr)/ repeat(2, 1fr);
+    gap: 30px;
+
+    @include width-tab-xl {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .featured__card {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 4px;
+      max-width: 600px;
+      height: 214px;
+      width: 100%;
+      border: 1px solid var(--color-gray-300);
+
+      &:hover {
+        box-shadow: var(--box-shadow-featured-card);
+        background: var(--white);
+        transform: scale(1.01);
+        transition: transform .2s;
+      }
+
+      @include width-tab-sm {
+        flex-direction: column;
+        max-width: 350px;
+        height: 450px;
+      }
+
+      &-content {
+        padding: 0  32px;
+
+        @include width-tab-sm {
+          padding: 32px;
+        }
+
+        &__post {
+          display: inline-block;
+          padding: 1px 8px;
+          border-radius: 4px;
+          color: var(--color-white);
+
+          @include post;
+        }
+
+        &__description {
+          margin-top: 20px;
+          color: var(--color-gray-900);
+          font-weight: var(--lead-bold-font-weight);
+
+          @include lead;
+        }
+
+        &__price {
+          margin-top: 20px;
+          font-weight: var(--large-regular-font-weight);
+          color: var(--color-gray-700);
+
+          @include large;
+
+          &-item {
+            display: inline-block;
+            color: var(--color-danger);
+            font-weight: var(--large-bold-font-weight);
+          }
+        }
+      }
+    }
+  }
+}

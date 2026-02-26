@@ -1,0 +1,114 @@
+@use "../mixins" as *;
+
+.opinion {
+  padding: 180px 0 100px;
+
+  @include width-tab-xl {
+    padding: 60px 0;
+  }
+
+  .opinion__slider {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    @include width-tab {
+      margin-top: 30px;
+
+      &>button {
+
+        display: none;
+      }
+    }
+
+    &-box {
+      overflow-x: hidden;
+
+      .opinion__content {
+        max-width: 1020px;
+        background: var(--color-white);
+        border-radius: 4px;
+        padding: 64px 105px 64px 163px;
+
+        @include width-tab {
+          padding: 30px 40px;
+        }
+
+        @include width-mob-xl {
+          padding: 20px 20px;
+        }
+
+        &-comment {
+          position: relative;
+
+          &__text {
+            color: var(--color-gray-800);
+            font-weight: var(--lead-regular-font-weight);
+
+            @include lead;
+
+            &:after {
+              position: absolute;
+              content: url("../../images/icons/braces.svg");
+              top: 0;
+              left: -58px;
+              height: 20px;
+              width: 28px;
+
+              @include width-tab {
+                display: none;
+              }
+            }
+          }
+
+          &__profile {
+            margin-top: 24px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+
+            &-info {
+              &__name {
+                color: var(--color-gray-900);
+                font-weight: var(--base-bold-font-weight);
+
+                @include base;
+              }
+
+              &__position {
+                margin-top: 4px;
+                color: var(--color-gray-700);
+                font-weight: var(--small-regular-font-weight);
+
+                @include small;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .opinion__pagination {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    &-item {
+      width: 30px;
+      height: 3px;
+      background: var(--color-gray-500);
+      border-radius: 4px;
+      transition: all 0.2s;
+
+      &:hover {
+        background: var(--color-gray-800);
+      }
+    }
+  }
+}
+

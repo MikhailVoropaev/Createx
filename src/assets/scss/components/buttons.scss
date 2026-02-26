@@ -1,0 +1,53 @@
+@use "../mixins" as *;
+
+.btn {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: 0.3s all;
+  white-space: nowrap;
+}
+
+.btn-link {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn-large {
+  padding: 17px 40px;
+
+  @include btn-large;
+
+  @include width-tab-sm {
+    padding: 15px 30px;
+  }
+}
+
+.btn-small {
+  padding: 18px 35px;
+
+  @include btn-small;
+}
+
+.btn-primary {
+  color: var(--color-white);
+  background: var(--color-btn-primary);
+  border: 1px var(--color-primary) solid;
+  transition: all 0.2s linear;
+
+  &:hover {
+    background: inherit;
+    color: var(--color-primary);
+  }
+}
+
+.btn-secondary {
+  color: var(--color-primary);
+  background: inherit;
+  border: 1px var(--color-primary) solid;
+  transition: all 0.2s linear;
+
+  &:hover {
+    color: var(--color-white);
+    background: var(--color-btn-primary);
+  }
+}

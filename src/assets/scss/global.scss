@@ -1,0 +1,119 @@
+@use "mixins" as *;
+
+:root {
+  font-family: "Lato", sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: white;
+}
+
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.bg--primary {
+  background: var(--color-background);
+}
+
+.headings {
+  text-align: center;
+
+  &__subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: var(--headings-h6-bold-font-weight);
+    color: var(--color-gray-900);
+
+    @include headings-h6;
+  }
+
+  &__title {
+    font-weight: var(--display-h1-black-font-weight);
+    color: var(--color-gray-900);
+    margin-top: 8px;
+
+    @include headings-h1;
+  }
+}
+
+.headings__mix {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @include width-tab-sm {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  .headings__box {
+  }
+}
+
+.headings__center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.success {
+  background: var(--color-success);
+}
+.info {
+  background: var(--color-info);
+}
+.warning {
+  background: var(--color-warning);
+}
+.pink {
+  background: var(--color-pink);
+}
+.secondary {
+  background: var(--color-secondary);
+}
+.gray-200 {
+  background: var(--color-gray-200);
+}
+
+.slider-controls {
+  display: flex;
+
+  .slider-control {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 100%;
+    transition: all 0.2s;
+
+    :not(&:disabled) {
+      .slider-control {
+        &:hover {
+          background: var(--color-primary);
+          color: var(--color-white);
+        }
+      }
+    }
+
+    &__icon {
+      position: absolute;
+      content: "";
+      height: 24px;
+      width: 24px;
+      top: 12px;
+      left: 12px;
+    }
+  }
+}

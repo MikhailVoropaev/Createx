@@ -1,0 +1,29 @@
+:root {
+  --color-white: #fff;
+  --color-primary: #ff3f3a;
+  --color-secondary: #ffcf2d;
+  --color-success: #03cea4;
+  --color-danger: #ff4242;
+  --color-warning: #f89828;
+  --color-info: #5a87fc;
+  --color-gray-900: #1e212c;
+  --color-gray-800: #424551;
+  --color-gray-700: #787a80;
+  --color-gray-600: #9a9ca5;
+  --color-gray-500: #b3b7bc;
+  --color-gray-400: #d7dadd;
+  --color-gray-300: #e5e8ed;
+  --color-gray-200: #f4f5f6;
+  --color-gray-100: #f9f9f9;
+  --color-pink: #f52f6e;
+  --color-btn-primary: linear-gradient(45deg, #ff3f3a 0%, #f75e05 100%);
+  --color-header-nav-background: rgba(244, 245, 246, 0.5);
+  --color-background: linear-gradient(45deg, rgba(255, 63, 58, 0.2) 0%, rgba(247, 94, 5, 0.2) 100%);
+  --color-primary-btn-video: rgba(255, 63,58, 0.2);
+  --box-shadow-featured-card: 0 4px 4px -4px rgba(30, 33, 44, 0.03), 0 12px 10px -6px rgba(154, 156, 165, 0.04), 0 30px 24px -10px rgba(154, 156, 165, 0.05), 0 80px 80px -20px rgba(154, 156, 165, 0.08);
+  --box-shadow-lectures-item: 0 4px 4px -4px rgba(30, 33, 44, 0.05), 0 12px 10px -6px rgba(255, 63, 58, 0.08), 0 30px 24px -10px rgba(255, 63, 58, 0.1), 0 80px 80px -20px rgba(255, 63, 58, 0.16);
+  --background-team-card-profile: linear-gradient(180deg, rgba(30, 33, 44, 0) 43.9%, rgba(30, 33, 44, 0.03) 55.21%, rgba(30, 33, 44, 0.33) 68.73%, rgba(30, 33, 44, 0.56) 76.17%, rgba(30, 33, 44, 0.77) 83.75%, rgba(30, 33, 44, 0.92) 91.49%, #1e212c 100%);
+  --background-footer-form-input: rgba(255, 255, 255, 0.12);
+  --background-footer-form-input-border: rgba(255, 255, 255, 0.2);
+  --background-footer-copyright: rgba(255, 255, 255, 0.05);
+}

@@ -1,0 +1,119 @@
+@use "../mixins" as *;
+
+.lectures {
+  margin-top: 102px;
+  padding: 80px 0;
+
+  @include width-tab {
+    margin-top: 80px;
+    padding: 60px 0;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 60px;
+
+    .lectures__item {
+      display: flex;
+      gap: 40px;
+      padding: 32px 40px;
+      border-radius: 4px;
+      background: var(--color-white);
+
+      &:hover {
+        box-shadow: var(--box-shadow-lectures-item);
+        z-index: 1;
+        transform: scale(1.01);
+        transition: all .2s linear;
+      }
+
+      @include width-mob-xl {
+        flex-direction: column;
+      }
+
+      &-date {
+        display: flex;
+
+        &__number {
+          margin-right: 20px;
+          color: var(--color-primary);
+          letter-spacing: 0.02em;
+          font-weight: var(--display-h4-black-font-weight);
+
+          @include display-h4;
+        }
+
+        &__box {
+          .lectures__item-date__month {
+            color: var(--color-gray-900);
+            font-weight: var(--lead-bold-font-weight);
+
+            @include lead;
+          }
+
+          .lectures__item-date__time {
+            margin-top: 4px;
+            color: var(--color-gray-700);
+            font-weight: var(--base-regular-font-weight);
+            white-space: nowrap;
+
+            @include base;
+          }
+        }
+      }
+
+      &-description {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        gap: 10px;
+
+        @include width-tab {
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 20px;
+        }
+
+        &__info {
+          &-title {
+            color: var(--color-gray-900);
+            font-weight: var(--lead-bold-font-weight);
+
+            @include lead;
+          }
+
+          &-subtitle {
+            margin-top: 4px;
+            color: var(--color-gray-400);
+            font-weight: var(--base-regular-font-weight);
+
+            @include base;
+          }
+        }
+      }
+    }
+  }
+
+  &__explore {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    @include width-tab-sm {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &-text {
+      color: var(--color-gray-900);
+      font-weight: var(--headings-h3-bold-font-weight);
+
+      @include headings-h3;
+    }
+  }
+}

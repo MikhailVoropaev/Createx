@@ -1,0 +1,58 @@
+@use "../mixins" as *;
+
+.certificate {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 120px 0;
+    gap: 20px;
+
+    @include width-tab-xl {
+      margin: 80px 0;
+    }
+
+    @include width-tab {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .certificate__illustration {
+      position: relative;
+      width: 100%;
+
+      &>img {
+        position: absolute;
+        content: "";
+        right: 0;
+        top: 0;
+
+        @include width-tab {
+          position: static;
+        }
+      }
+    }
+
+    .certificate__content {
+      max-width: 390px;
+
+      @include width-tab {
+        margin: 0 auto;
+      }
+
+      &-text {
+        margin-top: 48px;
+        color: var(--color-gray-800);
+        font-weight: var(--base-regular-font-weight);
+
+        @include base;
+      }
+
+      &-company {
+        margin-top: 32px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+  }
+}

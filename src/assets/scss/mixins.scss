@@ -1,0 +1,156 @@
+@use "bereakpoints" as *;
+@use "typography" as *;
+
+@mixin width-desk {
+  @media (max-width: $desk) {
+    @content;
+  }
+}
+
+@mixin width-tab-xl {
+  @media (max-width: $tab-xl) {
+    @content;
+  }
+}
+
+@mixin width-tab {
+  @media (max-width: $tab) {
+    @content;
+  }
+}
+
+@mixin width-tab-sm {
+  @media (max-width: $tab-sm) {
+    @content;
+  }
+}
+
+@mixin width-mob-xl {
+  @media (max-width: $mob-xl) {
+    @content;
+  }
+}
+
+@mixin width-mob {
+  @media (max-width: $mob) {
+    @content;
+  }
+}
+
+//- - - - typography
+@mixin headings-h1 {
+  font-size: var(--headings-h1-font-size);
+  line-height: var(--headings-h1-line-height);
+}
+
+@mixin headings-h2 {
+  font-size: var(--headings-h2-font-size);
+  line-height: var(--headings-h2-line-height);
+}
+
+@mixin headings-h3 {
+  font-size: var(--headings-h3-font-size);
+  line-height: var(--headings-h3-line-height);
+}
+
+@mixin headings-h4 {
+  font-size: var(--headings-h4-font-size);
+  line-height: var(--headings-h4-line-height);
+}
+
+@mixin headings-h5 {
+  font-size: var(--headings-h5-font-size);
+  line-height: var(--headings-h5-line-height);
+}
+
+@mixin headings-h6 {
+  font-size: var(--headings-h6-font-size);
+  line-height: var(--headings-h6-line-height);
+}
+
+@mixin display-h1 {
+  font-size: var(--display-h1-font-size);
+  line-height: var(--display-h1-line-height);
+}
+
+@mixin display-h2 {
+  font-size: var(--display-h2-font-size);
+  line-height: var(--display-h2-line-height);
+
+  @include width-tab-xl {
+    font-size: 50px;
+  }
+
+  @include width-tab-sm {
+    font-size: 40px;
+  }
+}
+
+@mixin display-h3 {
+  font-size: var(--display-h3-font-size);
+  line-height: var(--display-h3-line-height);
+}
+
+@mixin display-h4 {
+  font-size: var(--display-h4-font-size);
+  line-height: var(--display-h4-line-height);
+}
+
+@mixin lead {
+  font-size: var(--lead-font-size);
+  line-height: var(--lead-line-height);
+
+  @include width-tab-xl {
+    font-size: 18px;
+  }
+
+  @include width-mob-xl {
+    font-size: 16px;
+  }
+}
+
+@mixin large {
+  font-size: var(--large-font-size);
+  line-height: var(--large-line-height);
+}
+
+@mixin base {
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
+}
+
+@mixin small {
+  font-size: var(--small-font-size);
+  line-height: var(--small-line-height);
+}
+
+@mixin extrasmall {
+  font-size: var(--extrasmall-font-size);
+  line-height: var(--extrasmall-line-height);
+}
+
+@mixin extraextrasmall {
+  font-size: var(--extraextrasmall-font-size);
+  line-height: var(--extraextrasmall-line-height);
+}
+
+@mixin post {
+  font-size: var(--post-font-size);
+  line-height: var(--post-line-height);
+  font-weight: var(--post-regular-font-weight);
+}
+
+//- - - - - btn
+@mixin btn-large {
+  font-size: 16px;
+  line-height: 100%;
+  font-weight: 700;
+}
+
+@mixin btn-small {
+  font-size: 14px;
+  line-height: 100%;
+  font-weight: 700;
+}
+
+
