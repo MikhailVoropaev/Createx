@@ -1,0 +1,36 @@
+@use "../mixins" as *;
+
+.events-list.view--visible {
+  display: flex;
+}
+
+.events-grid.view--visible {
+  display: grid;
+}
+
+.events__pagination {
+  margin: 60px 0 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  &-item {
+    color: var(--color-gray-800);
+    font-weight: var(--base-bold-font-weight);
+    transition: color 0.3s;
+
+    @include base;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  &-item__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+  }
+}

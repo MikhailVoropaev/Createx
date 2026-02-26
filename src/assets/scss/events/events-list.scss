@@ -1,0 +1,83 @@
+@use "../mixins" as *;
+
+.events-list{
+  display: none;
+  flex-direction: column;
+  gap: 24px;
+
+  &__item{
+    display: flex;
+    padding: 31px 39px;
+    gap: 40px;
+    border: 1px solid var(--color-gray-300);
+    border-radius: 4px;
+    align-items: flex-start;
+
+
+    &:hover {
+      box-shadow: var(--box-shadow-events-list-item);
+      background: var(--color-white);
+      transform: scale(1.01);
+      transition: transform .2s;
+    }
+
+    &-date {
+      display: flex;
+
+      &__number {
+        color: var(--color-primary);
+        font-weight: var(--display-h4-black-font-weight);
+        letter-spacing: 0.2em;
+        margin-right: 20px;
+
+        @include display-h4;
+      }
+
+      &__time {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        &-title {
+          color: var(--color-gray-900);
+          font-weight: var(--lead-bold-font-weight);
+
+          @include lead;
+        }
+
+        &-subtitle {
+          color: var(--color-gray-700);
+          font-weight: var(--base-regular-font-weight);
+          white-space: nowrap;
+
+          @include base;
+        }
+      }
+    }
+
+    &-info {
+      max-width: 757px;
+      width: 100%;
+
+      &__title {
+        color: var(--color-gray-900);
+        font-weight: var(--lead-bold-font-weight);
+
+        @include lead;
+      }
+
+      &__subtitle {
+        display: inline-block;
+        margin-top: 4px;
+        color: var(--color-gray-700);
+        font-weight: var(--base-regular-font-weight);
+
+        @include base;
+      }
+    }
+
+    &-button {
+      white-space: nowrap;
+    }
+  }
+}

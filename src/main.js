@@ -1,10 +1,3 @@
-import './assets/scss/reset.scss'
-import './assets/scss/global.scss'
-import './assets/scss/mixins.scss'
-import './assets/scss/mixins.scss'
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const svgs = document.querySelectorAll('[src$=".svg"]');
 
