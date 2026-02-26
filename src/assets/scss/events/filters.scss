@@ -9,6 +9,16 @@
     display: flex;
     justify-content: space-between;
 
+    @include width-desk {
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-around;
+    }
+
+    @include width-tab-sm {
+      justify-content: flex-end;
+    }
+
     .filters__item {
       display: flex;
       align-items: center;
@@ -77,6 +87,7 @@
         appearance: none;
         position: relative;
         z-index: 1;
+        overflow-x: auto;
 
         &__option {
           font-weight: var(--small-regular-font-weight);

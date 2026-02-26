@@ -1,0 +1,25 @@
+@use "../mixins" as *;
+
+.event__heading {
+  text-align: center;
+  padding: 100px 0 120px;
+
+  &-subtitle {
+    color: var(--color-primary);
+    letter-spacing: var(--letter-spacing-xl);
+    text-transform: uppercase;
+    font-weight: var(--headings-h6-bold-font-weight);
+    margin-bottom: 12px;
+
+    @include headings-h6;
+  }
+
+  &-title {
+    max-width: 1020px;
+    margin: 0 auto;
+    color: var(--color-gray-900);
+    font-weight: var(--headings-h1-black-font-weight);
+
+    @include headings-h1;
+  }
+}

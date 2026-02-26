@@ -13,6 +13,15 @@
     border-radius: 4px;
     align-items: flex-start;
 
+    @include width-tab-sm {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include width-mob-xl {
+      align-items: flex-end;
+    }
+
 
     &:hover {
       box-shadow: var(--box-shadow-events-list-item);

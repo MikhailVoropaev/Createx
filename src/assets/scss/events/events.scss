@@ -15,6 +15,10 @@
   justify-content: center;
   gap: 20px;
 
+  @include width-tab {
+    margin: 60px 0 120px;
+  }
+
   &-item {
     color: var(--color-gray-800);
     font-weight: var(--base-bold-font-weight);

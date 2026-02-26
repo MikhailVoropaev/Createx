@@ -4,11 +4,19 @@
   display: none; //none
   grid-template: repeat(3, 1fr)/repeat(3, 1fr);
   gap: 30px;
-
   margin-top: 60px;
 
+  @include width-tab-xl {
+    grid-template: repeat(4, 1fr)/repeat(2, 1fr);
+  }
+
+  @include width-tab-sm {
+    grid-template: repeat(9, 1fr)/repeat(1, 1fr);
+    place-items: center;
+  }
+
   &__item{
-    width: 390px;
+    max-width: 390px;
     height: 323px;
     display: flex;
     flex-direction: column;
