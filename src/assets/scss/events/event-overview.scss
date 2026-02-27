@@ -47,6 +47,10 @@
               &__btn {
                 margin-bottom: 120px;
 
+                &:after {
+                  transform: translateY(-50%) rotate(-360deg);
+                }
+
                 &:before {
                   transform: translateY(-50%) rotate(720deg);
                 }
@@ -87,6 +91,7 @@
               border-radius: 4px;
               top: 50%;
               left: 0;
+              transition: all 0.6s;
             }
 
             &:after {
@@ -94,7 +99,6 @@
             }
 
             &:before {
-              transition: all 0.6s;
               transform: translateY(-50%) rotate(-90deg);
             }
 
