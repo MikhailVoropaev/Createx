@@ -3,10 +3,22 @@
 .event-overview {
   margin-top: 120px;
 
+  @include width-tab-xl {
+    margin-top: 60px;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 20px;
+
+    @include width-tab-xl {
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
 
     .event-overview__content {
       &-title {
@@ -27,6 +39,10 @@
           position: relative;
 
           &.event-overview__content-item--active {
+            @include width-tab-sm {
+              height: 220px;
+            }
+
             .event-overview__content-item {
               &__btn {
                 margin-bottom: 120px;
@@ -43,6 +59,10 @@
                 bottom: 0;
 
                 @include base;
+
+                @include width-tab-sm {
+                  height: 180px;
+                }
               }
             }
           }
@@ -82,6 +102,20 @@
               display: inline-block;
               color: var(--color-gray-900);
               font-weight: var(--lead-bold-font-weight);
+
+              @include width-tab-sm{
+                display: none;
+              }
+            }
+
+            &-title__abbreviated {
+              display: none;
+              color: var(--color-gray-900);
+              font-weight: var(--lead-bold-font-weight);
+
+              @include width-tab-sm {
+                display: inline-block;
+              }
             }
           }
 
@@ -90,16 +124,12 @@
             opacity: 0;
             transition: 0.3s;
             max-width: 560px;
-            height: 40px;
             left: 40px;
             top: 0;
             font-size: 0;
             margin-top: 16px;
             color: var(--color-gray-800);
             font-weight: var(--base-regular-font-weight);
-
-
-
           }
         }
       }
