@@ -54,6 +54,7 @@
           padding: 1px 8px;
           border-radius: 4px;
           color: var(--color-white);
+          font-weight: var(--post-regular-font-weight);
 
           @include post;
         }
