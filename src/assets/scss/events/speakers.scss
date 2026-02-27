@@ -51,6 +51,10 @@
         display: flex;
         gap: 40px;
 
+        @include width-tab {
+          justify-content: center;
+        }
+
         .speakers__content-company {
           display: inline-block;
           height: 50px;
@@ -68,6 +72,10 @@
         display: flex;
         align-items: center;
         gap: 24px;
+
+        @include width-tab {
+          justify-content: center;
+        }
 
         &__link {
           color: var(--color-gray-700);

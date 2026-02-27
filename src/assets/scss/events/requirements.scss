@@ -1,0 +1,61 @@
+@use "../mixins" as *;
+
+.requirements {
+  margin-top: 180px;
+
+  @include width-tab-xl {
+    margin-top: 60px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    @include width-tab-xl {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .requirements__headings {
+      text-align: left;
+      max-width: 495px;
+
+      @include width-tab-xl {
+        max-width: none;
+      }
+    }
+
+    .requirements__items {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      max-width: 600px;
+      gap: 20px;
+
+      .requirements__item {
+        padding-left: 36px;
+        color: var(--color-gray-800);
+        font-weight: var(--lead-bold-font-weight);
+        position: relative;
+        transition: scale, color .3s;
+
+        @include lead;
+
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 5px;
+          width: 20px;
+          height: 20px;
+          background: url("../../images/icons/specification-description-check.svg") no-repeat;
+        }
+
+        &:hover {
+          color: var(--color-primary);
+          transform: scale(1.01);
+        }
+      }
+    }
+  }
+}
