@@ -3,9 +3,98 @@
 .event-subscribe {
   margin-top: 180px;
 
+  @include width-tab-xl {
+    margin-top: 60px;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
     background: var(--background-event-subscribe);
+    padding: 60px 104px;
+    border-radius: 4px;
+
+    @include width-tab-xl {
+      justify-content: center;
+      padding: 60px 40px;
+    }
+
+
+    .event-subscribe__illustration {
+      @include width-tab-xl {
+        display: none;
+      }
+    }
+
+    .event-subscribe__content {
+      max-width: 600px;
+
+      &-title {
+        color: var(--color-gray-900);
+        font-weight: var(--headings-h2-black-font-weight);
+
+        @include headings-h2;
+      }
+
+      &-form {
+        &__items {
+          margin-top: 48px;
+          display: flex;
+          justify-content: space-between;
+          gap: 24px;
+
+          @include width-mob-xl {
+            flex-direction: column;
+            justify-content: flex-end;
+          }
+
+          .event-subscribe__content-form__item-input {
+            padding: 13px 16px;
+            border: 1px solid var(--color-gray-400);
+            border-radius: 4px;
+            width: 100%;
+            background: var(--color-white);
+            color: var(--color-gray-600);
+            font-weight: var(--base-regular-font-weight);
+            outline: none;
+
+            @include base;
+          }
+        }
+
+        &__checkbox {
+          display: flex;
+          align-items: center;
+          margin-top: 24px;
+          color: var(--color-gray-800);
+          font-weight: var(--base-regular-font-weight);
+
+          @include base;
+
+          &-input {
+            -webkit-appearance: none;
+            appearance: none;
+            display: inline-block;
+            line-height: 0;
+            border: 1px solid var(--color-primary);
+            border-radius: 4px;
+            cursor: pointer;
+            background: inherit;
+            height: 16px;
+            width: 16px;
+            margin-right: 12px;
+            transition: 0.2s;
+
+            &:checked {
+              background-color: var(--color-primary);
+              background-image: url("../../images/icons/subscribe-check.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          }
+        }
+      }
+    }
   }
 }

@@ -235,16 +235,18 @@
         Don’t want to miss the best events?
         Subscribe to our newsletter!
       </h2>
-      <div class="event-subscribe__content-form">
-        <input class="event-subscribe__content-form__input" type="text" placeholder="Your working email">
-        <button class="btn btn-primary btn-large" type="submit">
-          Subscribe
-        </button>
-      </div>
-      <label class="event-subscribe__content-checkbox no-select">
-        <input class="event-subscribe__content-checkbox__input" type="checkbox">
-        I agree to receive communications from Createx Online School
-      </label>
+      <form class="event-subscribe__content-form">
+        <div class="event-subscribe__content-form__items">
+          <input class="event-subscribe__content-form__item-input" type="text" placeholder="Your working email">
+          <button class="btn btn-primary btn-large" type="submit">
+            Subscribe
+          </button>
+        </div>
+        <label for="event-subscribe-checkbox" class="event-subscribe__content-form__checkbox no-select">
+          <input class="event-subscribe__content-form__checkbox-input" id="event-subscribe-checkbox" type="checkbox">
+          I agree to receive communications from Createx Online School
+        </label>
+      </form>
     </div>
 
   </div>
