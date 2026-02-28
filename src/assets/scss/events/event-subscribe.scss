@@ -72,6 +72,29 @@
 
           @include base;
 
+          &-text, &-abbreviated {
+            cursor: pointer;
+            display: inline-block;
+            color: inherit;
+            font-weight: inherit;
+
+            @include base;
+          }
+
+          &-text {
+            @include width-tab-sm {
+              display: none;
+            }
+          }
+
+          &-abbreviated {
+            display: none;
+
+            @include width-tab-sm {
+              display: block;
+            }
+          }
+
           &-input {
             -webkit-appearance: none;
             appearance: none;
