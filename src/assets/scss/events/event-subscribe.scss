@@ -1,1 +1,11 @@
 @use "../mixins" as *;
+
+.event-subscribe {
+  margin-top: 180px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    background: var(--background-event-subscribe);
+  }
+}
