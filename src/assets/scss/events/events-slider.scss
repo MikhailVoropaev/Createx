@@ -7,6 +7,14 @@
   &__container {
     padding: 100px 0 180px;
 
+    @include width-tab-xl {
+      padding: 80px 0 120px;
+    }
+
+    .events-slider__headings {
+      padding: 0 15px;
+    }
+
     .events-slider__items {
       padding: 0 15px;
       margin-top: 60px;
@@ -16,6 +24,10 @@
 
       overflow: hidden;
       position: relative;
+
+      @include width-tab-xl {
+        justify-content: center;
+      }
 
       .events-slider__item {
         position: absolute;
@@ -59,6 +71,11 @@
       align-items: center;
       justify-content: center;
       gap: 80px;
+
+      @include width-tab-sm {
+        flex-direction: column;
+        gap: 30px;
+      }
 
       &-title {
         color: var(--color-gray-900);
