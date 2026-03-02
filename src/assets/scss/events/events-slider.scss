@@ -35,6 +35,10 @@
           transition: transform .1s;
         }
 
+        .events-slider__item-btn {
+          text-align: center;
+        }
+
         &.events-slider__item--slider__left {
           left: -100vw;
         }
@@ -47,7 +51,21 @@
           position: static;
         }
       }
+    }
 
+    .events-slider__explore {
+      margin-top: 85px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 80px;
+
+      &-title {
+        color: var(--color-gray-900);
+        font-weight: var(--headings-h3-bold-font-weight);
+
+        @include headings-h3;
+      }
     }
   }
 }
