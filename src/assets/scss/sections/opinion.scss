@@ -1,12 +1,24 @@
 @use "../mixins" as *;
 
-.opinion {
+.opinion__index {
   padding: 180px 0 100px;
 
   @include width-tab-xl {
     padding: 60px 0;
   }
+}
 
+.opinion__about {
+  margin-top: 120px;
+  padding-top: 100px;
+
+  @include width-tab-xl {
+    margin-top: 60px;
+    padding-top: 50px;
+  }
+}
+
+.opinion {
   .opinion__slider {
     margin-top: 60px;
     display: flex;

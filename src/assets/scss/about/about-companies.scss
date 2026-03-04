@@ -1,0 +1,34 @@
+@use "../mixins" as *;
+
+.about-companies {
+  margin-top: 180px;
+  padding-bottom: 100px;
+
+  @include width-mob-xl {
+    margin-top: 90px;
+    padding-bottom: 60px;
+  }
+
+  .about-companies__items {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 100px;
+    justify-content: center;
+
+    @include width-mob-xl {
+      gap: 40px;
+    }
+
+    .about-companies__item {
+      display: inline-block;
+      border-radius: 10px;
+      transition: scale .4s, background .4s;
+
+      &:hover {
+        transform: scale(1.05);
+        background: var(--color-white);
+      }
+    }
+  }
+}

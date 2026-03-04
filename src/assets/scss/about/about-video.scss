@@ -27,6 +27,8 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        user-select: none;
+        transition: all .2s;
 
         &__icon {
           width: 52px;
@@ -56,6 +58,10 @@
           font-weight: var(--small-bold-font-weight);
 
           @include small;
+        }
+
+        &:active {
+          transform: scale(1.05);
         }
       }
 
