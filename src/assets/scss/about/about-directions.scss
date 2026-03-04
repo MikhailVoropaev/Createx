@@ -54,6 +54,7 @@
         border: 1px solid var(--color-gray-300);
         border-radius: 4px;
         transition: box-shadow .4s, scale .4s;
+        cursor: pointer;
 
         &:hover {
           box-shadow: var(--box-shadow-events-list-item);
