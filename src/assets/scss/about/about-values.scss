@@ -1,0 +1,88 @@
+@use "../mixins" as *;
+
+.about-values {
+  margin-top: 180px;
+
+  @include width-tab-xl {
+    margin-top: 90px;
+  }
+
+  &__container {
+    .about-values__items {
+      margin-top: 60px;
+      display: flex;
+      justify-content: space-between;
+
+      @include width-tab-xl {
+        display: grid;
+        grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+        justify-items: center;
+        row-gap: 20px;
+      }
+
+      @include width-mob-xl {
+        grid-template-columns: 1fr;
+      }
+
+      .about-values__divider {
+        position: relative;
+        display: inline-block;
+
+        @include width-tab-xl {
+          display: none;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 80px;
+          left: -80px;
+          height: 1px;
+          width: 162px;
+          transform: rotate(-90deg);
+          background: var(--background-about-values-divider);
+        }
+      }
+
+      .about-values__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 240px;
+        width: 100%;
+
+        @include width-mob-xl {
+          border: 1px solid var(--color-gray-200);
+          padding: 25px;
+          border-radius: 25px;
+          transition: box-shadow .4s, scale .3s;
+
+          &:hover {
+            box-shadow: var(--box-shadow-event-slidebar);
+          }
+
+          &:active {
+            transform: scale(1.05);
+          }
+        }
+
+        &-title {
+          margin-top: 25px;
+          color: var(--color-gray-900);
+          font-weight: var(--lead-bold-font-weight);
+
+          @include lead;
+        }
+
+        &-text {
+          margin-top: 7px;
+          text-align: center;
+          color: var(--color-gray-700);
+          font-weight: var(--base-regular-font-weight);
+
+          @include base;
+        }
+      }
+    }
+  }
+}
