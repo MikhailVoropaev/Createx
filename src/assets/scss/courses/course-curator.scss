@@ -1,0 +1,110 @@
+@use "../mixins" as *;
+
+.course-curator {
+  margin-top: 200px;
+
+  @include width-tab-sm {
+    margin-top: 80px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+
+    @include width-tab-sm {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .course-curator__profile {
+      flex-shrink: 0;
+      width: 495px;
+      height: 580px;
+      position: relative;
+
+      @include width-tab-xl {
+        width: 295px;
+        height: 329px;
+      }
+
+      &-images {
+        position: absolute;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 458px;
+        top: -20px;
+
+        @include width-tab-xl {
+          width: 90%;
+        }
+      }
+    }
+
+    .course-curator__content {
+      max-width: 600px;
+      width: 100%;
+
+      &-position {
+        margin-top: 16px;
+        color: var(--color-gray-700);
+        font-weight: var(--lead-regular-font-weight);
+
+        @include lead;
+      }
+
+      &-statistics {
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        .course-curator__content-statistic {
+          display: flex;
+          gap: 8px;
+          align-items: center;
+          color: var(--color-gray-800);
+          font-weight: var(--base-bold-font-weight);
+
+          @include base;
+
+          &__icon {
+            width: 16px;
+            height: 16px;
+            color: var(--color-primary);
+          }
+        }
+      }
+
+      &-text {
+        margin-top: 32px;
+        color: var(--color-gray-800);
+        font-weight: var(--base-regular-font-weight);
+
+        @include base;
+      }
+
+      &-socials {
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        .course-curator__content-social {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: var(--color-gray-700);
+          transition: color .4s;
+
+          &:hover {
+            color: var(--color-primary);
+          }
+        }
+      }
+    }
+  }
+}

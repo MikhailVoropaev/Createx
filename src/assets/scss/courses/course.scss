@@ -1,0 +1,29 @@
+@use  "../mixins" as *;
+
+.course {
+  margin-top: 100px;
+  padding-bottom: 120px;
+
+  &__container {
+    max-width: 1020px;
+    width: 100%;
+    text-align: center;
+
+    .course__subtitle {
+      color: var(--color-primary);
+      letter-spacing: var(--letter-spacing-xl);
+      text-transform: uppercase;
+      font-weight: var(--headings-h6-bold-font-weight);
+
+      @include headings-h6;
+    }
+
+    .course__title {
+      margin-top: 12px;
+      color: var(--color-gray-900);
+      font-weight: var(--display-h1-black-font-weight);
+
+      @include headings-h1; 
+    }
+  }
+}
