@@ -1,6 +1,10 @@
 @use "../mixins" as *;
 
 .certificate {
+  &__container-flex {
+    align-items: center;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -14,6 +18,10 @@
     @include width-tab {
       flex-direction: column;
       gap: 30px;
+    }
+
+    .certificate__illustration-flex {
+      width: 100%;
     }
 
     .certificate__illustration {

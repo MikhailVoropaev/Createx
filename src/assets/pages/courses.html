@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../scss/style.scss">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__container">
+        <a class="logo__link" href="../../../index.html">
+          <img src="../images/logo.svg" alt="Logo image">
+        </a>
+
+        <nav class="header__nav">
+          <ul class="header__nav-menu">
+            <li class="header__nav-menu__item">
+              <a class="header__nav-menu__item-link" href="about.html">
+                About Us
+              </a>
+            </li>
+            <li class="header__nav-menu__item">
+              <a class="header__nav-menu__item-link" href="courses.html">
+                Courses
+              </a>
+            </li>
+            <li class="header__nav-menu__item">
+              <a class="header__nav-menu__item-link" href="events-view.html">
+                Events
+              </a>
+            </li>
+            <li class="header__nav-menu__item">
+              <a class="header__nav-menu__item-link" href="#">
+                Blog
+              </a>
+            </li>
+            <li class="header__nav-menu__item">
+              <a class="header__nav-menu__item-link" href="#">
+                Contacts
+              </a>
+            </li>
+          </ul>
+
+          <div class="header__nav-cta header__actions">
+            <button class="btn btn-large btn-primary">
+              Get consultation
+            </button>
+            <div class="header__nav-cta__auth">
+              <button class="header__nav-cta__auth-btn">
+                <img data-svg-fill="false" src="../images/icons/profile.svg" alt="Profile image">
+                Log in
+              </button>
+
+              <span>/</span>
+
+              <button class="header__nav-cta__auth-btn">
+                Register
+              </button>
+            </div>
+          </div>
+        </nav>
+
+        <button class="burger">
+          <span class="burger__item"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="featured-courses">
+    <div class="container featured-courses__container">
+      <div class="headings">
+        <p class="headings__subtitle">
+          Enjoy your studying!
+        </p>
+        <h1 class="headings__title">
+          Our online courses
+        </h1>
+      </div>
+      <div class="featured-courses__filter">
+        <div class="featured-courses__filter-buttons">
+          <button class="featured-courses__filter-button">
+            All <sup class="featured-courses__filter-button__degree">17</sup>
+          </button>
+          <button class="featured-courses__filter-button">
+            Marketing <sup class="featured-courses__filter-button__degree">4</sup>
+          </button>
+          <button class="featured-courses__filter-button">
+            Marketing <sup class="featured-courses__filter-button__degree">3</sup>
+          </button>
+          <button class="featured-courses__filter-button">
+            HR & Recruting <sup class="featured-courses__filter-button__degree">5</sup>
+          </button>
+          <button class="featured-courses__filter-button">
+            Design <sup class="featured-courses__filter-button__degree">2</sup>
+          </button>
+          <button class="featured-courses__filter-button">
+            Development <sup class="featured-courses__filter-button__degree">3</sup>
+          </button>
+        </div>
+        <form method="get" class="featured-courses__filter-form">
+          <input class="featured-courses__filter-form__search" type="text" placeholder="Search course...">
+          <button type="submit" class="featured-courses__filter-form__button">
+          </button>
+        </form>
+      </div>
+
+      <div class="featured-courses__cards">
+        <a class="featured-courses__card" href="#">
+          <img class="featured-courses__card-images" src="../images/courses/featured-courses-card-1.png" alt="Image Profile Card">
+          <div class="featured-courses__card-content">
+            <span class="featured-courses__card-content__position success">
+              Marketing
+            </span>
+            <h3 class="featured-courses__card-content__description">
+              The Ultimate Google Ads Training Course
+            </h3>
+            <p class="featured-courses__card-content__name">
+              <span class="featured-courses__card-content__name-price">
+                $100
+              </span>
+              | by Jerome Bell
+            </p>
+          </div>
+        </a>
+
+        <a class="featured-courses__card" href="#">
+          <img class="featured-courses__card-images" src="../images/courses/featured-courses-card-2.png" alt="Image Profile Card">
+          <div class="featured-courses__card-content">
+            <span class="featured-courses__card-content__position pink">
+              Design
+            </span>
+            <h3 class="featured-courses__card-content__description">
+              Graphic Design Basic
+            </h3>
+            <p class="featured-courses__card-content__name">
+              <span class="featured-courses__card-content__name-price">
+                $500
+              </span>
+              | by Guy Hawkins
+            </p>
+          </div>
+        </a>
+
+        <a class="featured-courses__card" href="#">
+          <img class="featured-courses__card-images" src="../images/courses/featured-courses-card-3.png" alt="Image Profile Card">
+          <div class="featured-courses__card-content">
+            <span class="featured-courses__card-content__position info">
+              Management
+            </span>
+            <h3 class="featured-courses__card-content__description">
+              Business Development Management
+            </h3>
+            <p class="featured-courses__card-content__name">
+              <span class="featured-courses__card-content__name-price">
+                $400
+              </span>
+              | by Dianne Russell
+            </p>
+          </div>
+        </a>
+
+        <a class="featured-courses__card" href="#">
+          <img class="featured-courses__card-images" src="../images/courses/featured-courses-card-4.png" alt="Image Profile Card">
+          <div class="featured-courses__card-content">
+            <span class="featured-courses__card-content__position success">
+              Marketing
+            </span>
+            <h3 class="featured-courses__card-content__description">
+              Brand Management & PR Communications
+            </h3>
+            <p class="featured-courses__card-content__name">
+              <span class="featured-courses__card-content__name-price">
+                $530
+              </span>
+              | by Kristin Watson
+            </p>
+          </div>
+        </a>
+
+        <a class="featured-courses__card" href="#">
+          <img class="featured-courses__card-images" src="../images/courses/featured-courses-card-5.png" alt="Image Profile Card">
+          <div class="featured-courses__card-content">
+            <span class="featured-courses__card-content__position pink">
+              Design
+            </span>
+            <h3 class="featured-courses__card-content__description">
+              Graphic Design Basic
+            </h3>
+            <p class="featured-courses__card-content__name">
+              <span class="featured-courses__card-content__name-price">
+                $500
+              </span>
+              | by Guy Hawkins
+            </p>
+          </div>
+        </a>
+
+        <a class="featured-courses__card" href="#">
+          <img class="featured-courses__card-images" src="../images/courses/featured-courses-card-6.png" alt="Image Profile Card">
+          <div class="featured-courses__card-content">
+            <span class="featured-courses__card-content__position info">
+              Management
+            </span>
+            <h3 class="featured-courses__card-content__description">
+              Business Development Management
+            </h3>
+            <p class="featured-courses__card-content__name">
+              <span class="featured-courses__card-content__name-price">
+                $400
+              </span>
+              | by Dianne Russell
+            </p>
+          </div>
+        </a>
+
+        <a class="featured-courses__card" href="#">
+          <img class="featured-courses__card-images" src="../images/courses/featured-courses-card-7.png" alt="Image Profile Card">
+          <div class="featured-courses__card-content">
+            <span class="featured-courses__card-content__position blue">
+              Development
+            </span>
+            <h3 class="featured-courses__card-content__description">
+              Highload Software Architecture
+            </h3>
+            <p class="featured-courses__card-content__name">
+              <span class="featured-courses__card-content__name-price">
+                $600
+              </span>
+              | by Brooklyn Simmons
+            </p>
+          </div>
+        </a>
+
+        <a class="featured-courses__card" href="#">
+          <img class="featured-courses__card-images" src="../images/courses/featured-courses-card-8.png" alt="Image Profile Card">
+          <div class="featured-courses__card-content">
+            <span class="featured-courses__card-content__position warning">
+              HR & Recruting
+            </span>
+            <h3 class="featured-courses__card-content__description">
+              Human Resources – Selection and Recruitment
+            </h3>
+            <p class="featured-courses__card-content__name">
+              <span class="featured-courses__card-content__name-price">
+                $150
+              </span>
+              | by Kathryn Murphy
+            </p>
+          </div>
+        </a>
+
+        <a class="featured-courses__card" href="#">
+          <img class="featured-courses__card-images" src="../images/courses/featured-courses-card-9.png" alt="Image Profile Card">
+          <div class="featured-courses__card-content">
+            <span class="featured-courses__card-content__position pink">
+              Design
+            </span>
+            <h3 class="featured-courses__card-content__description">
+              User Experience. Human-centered Design
+            </h3>
+            <p class="featured-courses__card-content__name">
+              <span class="featured-courses__card-content__name-price">
+                $240
+              </span>
+              | by Cody Fisher
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <div class="featured-courses__refresh">
+        <button class="featured-courses__refresh-btn">
+          <img data-svg-fill="false" class="featured-courses__refresh-btn__icon" src="../images/icons/refresh.svg" alt="Refresh Button">
+          Load more
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="opinion opinion__courses gray-200">
+    <div class="container">
+      <div class="headings">
+        <p class="headings__subtitle">
+          TESTIMONIALS
+        </p>
+        <h1 class="headings__title">
+          What our students say
+        </h1>
+      </div>
+      <div class="opinion__slider slider-controls">
+        <button class="slider-control slider-control-prev" type="button">
+          <img data-svg-fill="false" class="slider-control__icon" src="../images/icons/slider-control-icon-prev.svg" alt="Slider Prev">
+        </button>
+
+        <div class="opinion__slider-box">
+          <div class="opinion__content">
+            <div class="opinion__content-comment">
+              <p class="opinion__content-comment__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.
+              </p>
+              <div class="opinion__content-comment__profile">
+                <img src="../images/index/opinion-images-profile.svg" alt="Profile Images" class="opinion__content-comment__profile-image">
+                <div class="opinion__content-comment__profile-info">
+                  <p class="opinion__content-comment__profile-info__name">
+                    Eleanor Pena
+                  </p>
+                  <p class="opinion__content-comment__profile-info__position">
+                    Position, Course
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="slider-control slider-control-next" type="button">
+          <img data-svg-fill="false" class="slider-control__icon" src="../images/icons/slider-control-icon-next.svg" alt="Slider Next">
+        </button>
+      </div>
+      <div class="opinion__pagination">
+        <button class="opinion__pagination-item"></button>
+        <button class="opinion__pagination-item"></button>
+        <button class="opinion__pagination-item"></button>
+        <button class="opinion__pagination-item"></button>
+        <button class="opinion__pagination-item"></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="certificate">
+    <div class="container">
+      <div class="certificate__container certificate__container-flex">
+        <div class="certificate__content">
+          <p class="headings__subtitle">
+            Createx Certificate
+          </p>
+          <h1 class="headings__title">
+            Your expertise will be confirmed
+          </h1>
+          <p class="certificate__content-text">
+            We are accredited by international professional organizations and institutes:
+          </p>
+          <div class="certificate__content-company">
+            <a class="certificate__content-company__item" href="#">
+              <img class="certificate__content-company__item-logo" src="../images/index/certificate/certificate-company-logo-1.svg" alt="Company Logo">
+            </a>
+            <a class="certificate__content-company__item" href="#">
+              <img class="certificate__content-company__item-logo" src="../images/index/certificate/certificate-company-logo-2.svg" alt="Company Logo">
+            </a>
+            <a class="certificate__content-company__item" href="#">
+              <img class="certificate__content-company__item-logo" src="../images/index/certificate/certificate-company-logo-3.svg" alt="Company Logo">
+            </a>
+          </div>
+        </div>
+        <div class="certificate__container-flex">
+          <img src="../images/index/certificate-illustration.jpg" alt="Certificate Illustration">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="subscribe bg--primary">
+    <div class="container subscribe__container">
+      <img class="subscribe__bgImages subscribe__bgImages-left" src="../images/subscribe-bg-illustration.svg" alt="Subscribe Banner">
+      <div class="headings subscribe__headings">
+        <p class="headings__subtitle">
+          Don’t miss anything
+        </p>
+        <h1 class="headings__title">
+          Subscribe to the Createx School announcements
+        </h1>
+      </div>
+      <div class="subscribe__form">
+        <input class="subscribe__form-input" placeholder="Your working email" type="text">
+        <button class="btn btn-primary btn-large">
+          Subscribe
+        </button>
+      </div>
+      <img class="subscribe__bgImages subscribe__bgImages-right" src="../images/subscribe-bg-illustration.svg" alt="Subscribe Banner">
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__info">
+        <img class="footer__info-logo" src="../images/footer-logo.svg" alt="Footer Logo">
+        <p class="footer__info-text">
+          Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts. We provide relevant approaches to online learning, internships and employment in the largest companies in the country.
+        </p>
+        <div class="footer__info-socials">
+          <a class="footer__info-social__link" href="#">
+            <img class="footer__info-social__link-icon" src="../images/icons/footerSocials/facebook.svg" alt="Facebook Icon">
+          </a>
+          <a class="footer__info-social__link" href="#">
+            <img class="footer__info-social__link-icon" src="../images/icons/footerSocials/twitter.svg" alt="Twitter Icon">
+          </a>
+          <a class="footer__info-social__link" href="#">
+            <img class="footer__info-social__link-icon" src="../images/icons/footerSocials/youtube.svg" alt="You Tube Icon">
+          </a>
+          <a class="footer__info-social__link" href="#">
+            <img class="footer__info-social__link-icon" src="../images/icons/footerSocials/telegram.svg" alt="Telegram Icon">
+          </a>
+          <a class="footer__info-social__link" href="#">
+            <img class="footer__info-social__link-icon" src="../images/icons/footerSocials/instagram.svg" alt="Instagram Icon">
+          </a>
+          <a class="footer__info-social__link" href="#">
+            <img class="footer__info-social__link-icon" src="../images/icons/footerSocials/linkedin.svg" alt="Linked-In Icon">
+          </a>
+        </div>
+      </div>
+      <div class="footer__nav">
+        <h1 class="footer__nav-title">
+          SITE MAP
+        </h1>
+        <div class="footer__nav-items">
+          <a class="footer__nav-item" href="#">
+            About Us
+          </a>
+          <a class="footer__nav-item" href="#">
+            Courses
+          </a>
+          <a class="footer__nav-item" href="#">
+            Events
+          </a>
+          <a class="footer__nav-item" href="#">
+            Blog
+          </a>
+          <a class="footer__nav-item" href="#">
+            Contacts
+          </a>
+        </div>
+      </div>
+      <div class="footer__nav">
+        <h1 class="footer__nav-title">
+          COURSES
+        </h1>
+        <div class="footer__nav-items">
+          <a class="footer__nav-item" href="#">
+            Marketing
+          </a>
+          <a class="footer__nav-item" href="#">
+            Management
+          </a>
+          <a class="footer__nav-item" href="#">
+            HR & Recruting
+          </a>
+          <a class="footer__nav-item" href="#">
+            Design
+          </a>
+          <a class="footer__nav-item" href="#">
+            Development
+          </a>
+        </div>
+      </div>
+      <div class="footer__nav">
+        <h1 class="footer__nav-title">
+          COURSES
+        </h1>
+        <div class="footer__nav-items">
+          <a data-svg-fill="false" class="footer__nav-item footer__item-tel" href="tel:(405)5550128">
+            (405) 555-0128
+          </a>
+          <a class="footer__nav-item footer__item-mail" href="mailto:hello@createx.com">
+            hello@createx.com
+          </a>
+        </div>
+      </div>
+      <div class="footer__nav">
+        <h1 class="footer__nav-title">
+          COURSES
+        </h1>
+        <form class="footer__form">
+          <label class="footer__form-box">
+            <input placeholder="Email address" class="footer__form-input" type="email">
+            <button class="footer__form-btn">
+              <img class="footer__form-btn__icon" src="../images/icons/footer-line-btn.svg" alt="Button Icon">
+            </button>
+          </label>
+          <p class="footer__item-text">
+            *Subscribe to our newsletter to receive communications and early updates from Createx SEO Agency.
+          </p>
+        </form>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="container copyright__container">
+        <p class="copyright__text">
+          © All rights reserved.Made with
+          <img data-svg-fill="false" class="copyright__text-icon" src="../images/icons/heart.svg" alt="Copyright Icon">
+          by Createx Studio
+        </p>
+        <button class="copyright__button">
+          GO TO TOP
+        </button>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="../js/spinIcon.js"></script>
+  <script type="module" src="../../main.js"></script>
+  <script type="module" src="../js/header.js"></script>
+</body>
+</html>
