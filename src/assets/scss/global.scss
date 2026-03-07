@@ -36,11 +36,9 @@ body {
 
   &__subtitle {
     text-transform: uppercase;
-    letter-spacing: 0.06em;
-    font-weight: var(--headings-h6-bold-font-weight);
-    color: var(--color-gray-900);
+    letter-spacing: var(--letter-spacing-xl);
 
-    @include headings-h6;
+    @include typography('headings-h6',var(--headings-h6-bold-font-weight), var(--color-gray-900));
   }
 
   &__title {

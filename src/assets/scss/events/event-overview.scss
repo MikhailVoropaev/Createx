@@ -59,8 +59,6 @@
                 top: 16px;
                 bottom: 0;
 
-                @include base;
-
                 @include width-tab-sm {
                   height: 180px;
                 }
@@ -99,9 +97,9 @@
 
             &-title {
               display: inline-block;
-              color: var(--color-gray-900);
-              font-weight: var(--lead-bold-font-weight);
               text-overflow: ellipsis;
+
+              @include typography('lead', var(--lead-bold-font-weight),var(--color-gray-900));
 
               @include width-tab-sm{
                 display: none;

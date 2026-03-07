@@ -1,0 +1,63 @@
+@use  "../mixins" as *;
+
+.course-action {
+  margin-top: 180px;
+
+  &__container {
+    padding: 48px 60px;
+    border-radius: 4px;
+
+    .course-action__countdown {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &-title {
+        @include typography('headings-h2', var(--headings-h2-black-font-weight), var(--color-gray-900) );
+      }
+
+      &-items {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+
+        .course-action__countdown-item {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+
+          &__time {
+            @include typography('headings-h5', var(--headings-h5-bold-font-weight), var(--color-gray-900));
+          }
+
+          &__total {
+            @include typography('headings-h5', var(--headings-h5-font-size), var(--color-gray-900));
+          }
+        }
+      }
+    }
+
+    .course-action__box {
+      margin-top: 26px;
+      display: flex;
+      justify-content: space-between;
+      gap: 21px;
+      align-items: flex-end;
+
+      .course-action__form {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+
+        &-label  {
+          @include typography('small', var(--small-regular-font-weight), var(--color-gray-800));
+
+          &__input {
+            max-width: 291px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
