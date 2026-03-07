@@ -54,10 +54,8 @@
 
         &__label {
           padding-left: 16px;
-          color: var(--color-gray-900);
-          font-weight: var(--small-bold-font-weight);
 
-          @include small;
+          @include typography('small',var(--small-bold-font-weight), var(--color-gray-900));
         }
 
         &:active {
@@ -81,17 +79,12 @@
         display: flex;
         align-items: center;
         gap: 16px;
-        color: var(--color-gray-900);
-        font-weight: var(--large-bold-font-weight);
         white-space: nowrap;
 
-        @include large;
+        @include typography('large',var(--large-bold-font-weight), var(--color-gray-900));
 
         &-num {
-          color: var(--color-primary);
-          font-weight: var(--display-h4-black-font-weight);
-
-          @include display-h4;
+          @include typography('display-h4',var(--display-h4-black-font-weight), var(--color-primary));
         }
       }
     }

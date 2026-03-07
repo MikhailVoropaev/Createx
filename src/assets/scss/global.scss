@@ -44,11 +44,9 @@ body {
   }
 
   &__title {
-    font-weight: var(--headings-h1-black-font-weight);
-    color: var(--color-gray-900);
     margin-top: 8px;
 
-    @include headings-h1;
+    @include typography('headings-h1',var(--headings-h1-black-font-weight), var(--color-gray-900));
   }
 }
 
@@ -136,12 +134,10 @@ body {
   padding-right: 26px;
   display: inline-block;
   text-decoration: none;
-  color: var(--color-gray-900);
-  font-weight: var(--base-bold-font-weight);
   position: relative;
   transition: 0.2s;
 
-  @include base;
+  @include typography('base',var(--base-bold-font-weight), var(--color-gray-900));
 
   &::before {
     position: absolute;

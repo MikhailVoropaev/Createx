@@ -102,10 +102,7 @@
       align-items: center;
 
       &-title {
-        color: var(--color-gray-900);
-        font-weight: var(--small-bold-font-weight);
-
-        @include small;
+        @include typography('small',var(--small-bold-font-weight) ,var(--color-gray-900));
       }
 
       &-item {
@@ -146,11 +143,9 @@
 
     .play__title {
       margin-top: 24px;
-      font-weight: var(--display-h2-black-font-weight);
-      color: var(--gray-900);
-      letter-spacing: 0.02em;
+      letter-spacing: var(--letter-spacing-l);
 
-      @include display-h2;
+      @include typography('display-h2',var(--display-h2-black-font-weight) ,var(--color-gray-900));
     }
 
     .play__buttons {
@@ -192,10 +187,8 @@
 
     &__title {
       margin-right: 12px;
-      color: var(--gray-900);
-      font-weight: var(--headings-h1-black-font-weight);
 
-      @include headings-h1;
+      @include typography('display-h1',var(--display-h1-black-font-weight) ,var(--color-gray-900));
 
       @include width-tab {
         &:after {
@@ -213,10 +206,7 @@
     }
 
     &__subtitle {
-      color: var(--gray-900);
-      font-weight: var(--base-regular-font-weight);
-
-      @include base;
+      @include typography('base',var(--base-regular-font-weight) ,var(--color-gray-900));
     }
   }
 

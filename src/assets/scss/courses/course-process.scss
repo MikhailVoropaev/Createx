@@ -1,0 +1,75 @@
+@use "../mixins" as *;
+
+.course-process {
+  margin-top: 180px;
+
+  @include width-tab-sm {
+    margin-top: 120px;
+  }
+
+  &__items {
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+    @include width-tab-sm {
+      margin-top: 60px;
+      display: grid;
+      grid-template: repeat(2,1fr)/ repeat(2, 1fr);
+      gap: 60px 30px;
+    }
+
+    .course-process__item {
+      position: relative;
+      max-width: 285px;
+      width: 100%;
+
+      &:nth-last-child(1) {
+        border-top: none;
+      }
+
+      &-divider {
+        display: flex;
+        align-items: center;
+
+        &__num {
+          display: inline-block;
+          border: 15px solid var(--color-white);
+          padding: 12px 15px;
+          border-radius: 50%;
+          background: var(--color-white);
+          transform: translateX(-31px);
+          transition: color .2s, background .2s;
+
+          @include typography('headings-h1', var(--headings-h1-black-font-weight), var(--color-gray-400));
+        }
+
+        &__line {
+          width: calc(100% + 62px);
+          margin-left: -31px;
+          border-top: 1px dashed var(--color-gray-400);
+        }
+      }
+
+      &-title {
+        @include typography('lead', var(--lead-bold-font-weight), var(--color-gray-900));
+      }
+
+      &-description {
+        margin-top: 8px;
+
+        @include typography('base', var(--base-regular-font-weight), var(--color-gray-700));
+      }
+
+      &:hover {
+        //разобраться с наведением и почему цвет не корректно работает
+        .course-process__item-divider__num {
+          color: var(--color-primary);
+          border: 15px solid var(--color-primary-6);
+          background: var(--color-primary-12);
+        }
+      }
+    }
+  }
+}

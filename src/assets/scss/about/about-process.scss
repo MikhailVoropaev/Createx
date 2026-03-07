@@ -35,10 +35,8 @@
 
         .about-process__content-item {
           position: relative;
-          color: var(--color-gray-700);
-          font-weight: var(--extrasmall-black-font-weight);
 
-          @include extrasmall;
+          @include typography('extrasmall',var(--extrasmall-black-font-weight), var(--color-gray-700));
 
           &:after {
             position: absolute;
@@ -76,18 +74,14 @@
 
           &__title {
             margin-top: 2px;
-            color: var(--color-gray-900);
-            font-weight: var(--lead-bold-font-weight);
 
-            @include lead;
+            @include typography('lead',var(--lead-bold-font-weight), var(--color-gray-900));
           }
 
           &__text {
             margin-top: 8px;
-            color: var(--color-gray-700);
-            font-weight: var(--base-regular-font-weight);
 
-            @include base;
+            @include typography('base',var(--base-regular-font-weight), var(--color-gray-700));
           }
         }
       }

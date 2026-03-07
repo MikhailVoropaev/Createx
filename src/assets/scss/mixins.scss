@@ -38,6 +38,79 @@
 }
 
 //- - - - typography
+$typography-classes: (
+  'headings-h1': (),
+  'headings-h2': (),
+  'headings-h3': (),
+  'headings-h4': (),
+  'headings-h5': (),
+  'headings-h6': (),
+  'display-h1': (),
+  'display-h2': (
+    'tab-xl': 50px,
+    'tab-sm': 40px
+  ),
+  'display-h3': (),
+  'display-h4': (),
+  'lead': (
+    'tab-xl': 18px,
+    'mob-xl': 16px
+  ),
+  'large': (),
+  'base': (),
+  'small': (),
+  'extrasmall': (),
+  'extraextrasmall': (),
+  'post': ()
+);
+
+@each $name, $breakpoints in $typography-classes {
+  .#{$name} {
+    font-size: var(--#{$name}-font-size);
+    line-height: var(--#{$name}-line-height);
+
+    @each $breakpoint, $value in $breakpoints {
+      @if $breakpoint == 'tab-xl' {
+        @include width-tab-xl {
+          font-size: $value;
+        }
+      } @else if $breakpoint == 'tab' {
+        @include width-tab {
+          font-size: $value;
+        }
+      } @else if $breakpoint == 'tab-sm' {
+        @include width-tab-sm {
+          font-size: $value;
+        }
+      } @else if $breakpoint == 'mob-xl' {
+        @include width-mob-xl {
+          font-size: $value;
+        }
+      } @else if $breakpoint == 'mob' {
+        @include width-mob {
+          font-size: $value;
+        }
+      }
+    }
+  }
+}
+
+@mixin typography($class, $font-weight, $color: null) {
+  @if map-has-key($typography-classes, $class) {
+    @extend .#{$class};
+  } @else {
+    @error "Типография #{$class} не найдена в $typography-classes";
+  }
+
+  @if $font-weight {
+    font-weight: $font-weight;
+  }
+
+  @if $color {
+    color: $color;
+  }
+}
+
 @mixin headings-h1 {
   font-size: var(--headings-h1-font-size);
   line-height: var(--headings-h1-line-height);
@@ -58,6 +131,7 @@
   line-height: var(--headings-h4-line-height);
 }
 
+
 @mixin headings-h5 {
   font-size: var(--headings-h5-font-size);
   line-height: var(--headings-h5-line-height);
@@ -76,14 +150,6 @@
 @mixin display-h2 {
   font-size: var(--display-h2-font-size);
   line-height: var(--display-h2-line-height);
-
-  @include width-tab-xl {
-    font-size: 50px;
-  }
-
-  @include width-tab-sm {
-    font-size: 40px;
-  }
 }
 
 @mixin display-h3 {

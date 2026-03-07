@@ -1,6 +1,9 @@
 :root {
   --color-white: #fff;
-  --color-primary: #ff3f3a;
+  --color-primary-base: 255, 63, 58;
+  --color-primary: rgb(var(--color-primary-base));
+  --color-primary-6: rgba(var(--color-primary-base), 0.06);
+  --color-primary-12: rgba(var(--color-primary-base), 0.12);
   --color-secondary: #ffcf2d;
   --color-success: #03cea4;
   --color-danger: #ff4242;

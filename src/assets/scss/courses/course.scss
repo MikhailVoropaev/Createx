@@ -10,20 +10,16 @@
     text-align: center;
 
     .course__subtitle {
-      color: var(--color-primary);
       letter-spacing: var(--letter-spacing-xl);
       text-transform: uppercase;
-      font-weight: var(--headings-h6-bold-font-weight);
 
-      @include headings-h6;
+      @include typography('headings-h6',var(--headings-h6-bold-font-weight), var(--color-primary));
     }
 
     .course__title {
       margin-top: 12px;
-      color: var(--color-gray-900);
-      font-weight: var(--display-h1-black-font-weight);
 
-      @include headings-h1; 
+      @include typography('headings-h1',var(--display-h1-black-font-weight), var(--color-gray-900));
     }
   }
 }

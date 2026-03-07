@@ -53,26 +53,20 @@
           display: inline-block;
           padding: 1px 8px;
           border-radius: 4px;
-          color: var(--color-white);
-          font-weight: var(--post-regular-font-weight);
 
-          @include post;
+          @include typography('post',var(--post-regular-font-weight), var(--color-white));
         }
 
         &__description {
           margin-top: 20px;
-          color: var(--color-gray-900);
-          font-weight: var(--lead-bold-font-weight);
 
-          @include lead;
+          @include typography('lead',var(--lead-bold-font-weight), var(--color-gray-900));
         }
 
         &__price {
           margin-top: 20px;
-          font-weight: var(--large-regular-font-weight);
-          color: var(--color-gray-700);
 
-          @include large;
+          @include typography('large',var(--large-regular-font-weight), var(--color-gray-700));
 
           &-item {
             display: inline-block;

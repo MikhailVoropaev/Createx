@@ -31,18 +31,14 @@
 
       &-name {
         margin-top: 16px;
-        color: var(--color-gray-800);
-        font-weight: var(--lead-bold-font-weight);
 
-        @include lead;
+        @include typography('lead',var(--lead-bold-font-weight), var(--color-gray-800));
       }
 
       &-position {
         margin-top: 4px;
-        color: var(--color-gray-700);
-        font-weight: var(--base-regular-font-weight);
 
-        @include base;
+        @include typography('base',var(--base-regular-font-weight), var(--color-gray-700));
       }
 
       &-bg {

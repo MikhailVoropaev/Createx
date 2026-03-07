@@ -111,10 +111,7 @@
 
       &__item {
         &-link {
-          font-weight: var(--base-bold-font-weight);
-          color: var(--color-gray-800);
-
-          @include base;
+          @include typography('base',var(--base-bold-font-weight), var(--color-gray-800));
 
           &:hover {
             color: var(--color-primary);
@@ -132,10 +129,7 @@
         display: flex;
 
         &-btn {
-          color: var(--color-gray-800);
-          font-weight: var(--base-bold-font-weight);
-
-          @include base;
+          @include typography('base',var(--base-bold-font-weight), var(--color-gray-800));
 
           &:first-child {
             display: flex;
@@ -149,11 +143,9 @@
         }
 
         &>span {
-          font-weight: var(--base-bold-font-weight);
-          color: var(--color-gray-800);
           margin: 0 3px;
 
-          @include base;
+          @include typography('base',var(--base-bold-font-weight), var(--color-gray-800));
         }
       }
     }

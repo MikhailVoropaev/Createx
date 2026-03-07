@@ -30,10 +30,7 @@
       max-width: 600px;
 
       &-title {
-        color: var(--color-gray-900);
-        font-weight: var(--headings-h2-black-font-weight);
-
-        @include headings-h2;
+        @include typography('headings-h2',var(--headings-h2-black-font-weight), var(--color-gray-900));
       }
 
       &-form {
@@ -54,22 +51,18 @@
             border-radius: 4px;
             width: 100%;
             background: var(--color-white);
-            color: var(--color-gray-600);
-            font-weight: var(--base-regular-font-weight);
             outline: none;
 
-            @include base;
+            @include typography('base',var(--base-regular-font-weight), var(--color-gray-600));
           }
         }
 
         &__checkbox {
+          margin-top: 24px;
           display: flex;
           align-items: center;
-          margin-top: 24px;
-          color: var(--color-gray-800);
-          font-weight: var(--base-regular-font-weight);
 
-          @include base;
+          @include typography('base',var(--base-regular-font-weight), var(--color-gray-800));
 
           &-text, &-abbreviated {
             cursor: pointer;

@@ -43,35 +43,24 @@
         gap: 4px;
 
         &-title {
-          color: var(--color-primary);
-          font-weight: var(--headings-h3-black-font-weight);
-
-          @include headings-h3;
+          @include typography('headings-h3',var(--headings-h3-black-font-weight), var(--color-primary));
         }
 
         &-time {
-          color: var(--color-gray-700);
-          font-weight: var(--base-regular-font-weight);
-
-          @include base;
+          @include typography('base',var(--base-regular-font-weight), var(--color-gray-700));
         }
       }
 
       &__info {
         &-title {
-          color: var(--color-gray-900);
-          font-weight: var(--large-bold-font-weight);
-
-          @include large;
+          @include typography('large',var(--large-bold-font-weight), var(--color-gray-900));
         }
 
         &-subtitle {
-          display: inline-block;
           margin-top: 8px;
-          color: var(--color-gray-700);
-          font-weight: var(--base-regular-font-weight);
+          display: inline-block;
 
-          @include base;
+          @include typography('base',var(--base-regular-font-weight), var(--color-gray-700));
         }
       }
     }

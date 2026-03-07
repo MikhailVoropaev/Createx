@@ -34,10 +34,8 @@
           background: var(--color-white);
           border-radius: 4px;
           padding: 1px 8px;
-          color: var(--color-gray-800);
-          font-weight: var(--small-regular-font-weight);
 
-          @include small;
+          @include typography('small',var(--small-regular-font-weight),var(--color-gray-800));
         }
       }
 
@@ -45,9 +43,8 @@
         display: flex;
         gap: 12px;
         margin-top: 16px;
-        color: var(--color-gray-700);
 
-        @include small;
+        @include typography('small',null , var(--color-gray-900));
 
         &-position {
           font-weight: var(--small-bold-font-weight);
@@ -67,18 +64,14 @@
 
       &-title {
         margin-top: 8px;
-        color: var(--color-gray-900);
-        font-weight: var(--lead-bold-font-weight);
 
-        @include lead;
+        @include typography('lead',var(--lead-bold-font-weight), var(--color-gray-900));
       }
 
       &-description {
         margin-top: 8px;
-        color: var(--color-gray-800);
-        font-weight: var(--base-regular-font-weight);
 
-        @include base;
+        @include typography('base',var(--base-regular-font-weight), var(--color-gray-800));
       }
 
       &-link {

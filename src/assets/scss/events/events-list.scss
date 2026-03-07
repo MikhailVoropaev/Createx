@@ -34,12 +34,10 @@
       display: flex;
 
       &__number {
-        color: var(--color-primary);
-        font-weight: var(--display-h4-black-font-weight);
-        letter-spacing: 0.2em;
+        letter-spacing: var(--letter-spacing-l);
         margin-right: 20px;
 
-        @include display-h4;
+        @include typography('headings-h3',var(--headings-h3-black-font-weight), var(--color-primary));
       }
 
       &__time {
@@ -48,18 +46,13 @@
         gap: 4px;
 
         &-title {
-          color: var(--color-gray-900);
-          font-weight: var(--lead-bold-font-weight);
-
-          @include lead;
+          @include typography('lead',var(--lead-bold-font-weight), var(--color-gray-900));
         }
 
         &-subtitle {
-          color: var(--color-gray-700);
-          font-weight: var(--base-regular-font-weight);
           white-space: nowrap;
 
-          @include base;
+          @include typography('base',var(--base-regular-font-weight), var(--color-gray-700));
         }
       }
     }
@@ -69,19 +62,14 @@
       width: 100%;
 
       &__title {
-        color: var(--color-gray-900);
-        font-weight: var(--lead-bold-font-weight);
-
-        @include lead;
+        @include typography('lead',var(--lead-bold-font-weight), var(--color-gray-900));
       }
 
       &__subtitle {
-        display: inline-block;
         margin-top: 4px;
-        color: var(--color-gray-700);
-        font-weight: var(--base-regular-font-weight);
+        display: inline-block;
 
-        @include base;
+        @include typography('base',var(--base-regular-font-weight), var(--color-gray-700));
       }
     }
 

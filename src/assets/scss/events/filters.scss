@@ -26,17 +26,12 @@
 
       &-title {
         display: inline-block;
-        color: var(--color-gray-700);
-        font-weight: var(--small-regular-font-weight);
 
-        @include small;
+        @include typography('small',var(--small-regular-font-weight), var(--color-gray-700));
       }
 
       &-label {
-        font-weight: var(--base-bold-font-weight);
-        color: var(--color-gray-800);
-
-        @include base;
+        @include typography('base',var(--base-bold-font-weight), var(--color-gray-800));
       }
 
       &-customSelect {
@@ -90,10 +85,7 @@
         overflow-x: auto;
 
         &__option {
-          font-weight: var(--small-regular-font-weight);
-          color: var(--color-gray-800);
-
-          @include small;
+          @include typography('small',var(--small-regular-font-weight), var(--color-gray-800));
         }
       }
 
@@ -112,8 +104,6 @@
     position: relative;
 
     &-input {
-      font-weight: var(--small-regular-font-weight);
-      color: var(--color-gray-600);
       padding: 11px 16px;
       outline: none;
       border: 1px solid var(--color-gray-400);
@@ -121,7 +111,7 @@
       width: 282px;
       z-index: 1;
 
-      @include small;
+      @include typography('small',var(--small-regular-font-weight), var(--color-gray-600));
     }
 
     &-button {

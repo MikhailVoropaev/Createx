@@ -188,12 +188,10 @@
       display: flex;
       align-items: center;
       gap: 16px;
-      color: var(--color-gray-800);
-      font-weight: var(--base-bold-font-weight);
       cursor: pointer;
       transition: color ease-in-out .3s, transform ease-in-out .9s;
 
-      @include base;
+      @include typography('base',var(--base-bold-font-weight), var(--color-gray-800));
 
       &__icon {
         height: 24px;

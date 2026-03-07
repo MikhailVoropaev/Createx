@@ -24,26 +24,19 @@
       width: 100%;
 
       &-title {
-        color: var(--color-gray-900);
-        font-weight: var(--headings-h1-black-font-weight);
-
-        @include headings-h1;
+        @include typography('headings-h1',var(--display-h1-black-font-weight), var(--color-gray-900));
       }
 
       &-text {
         margin-top: 40px;
-        color: var(--color-gray-800);
-        font-weight: var(--base-regular-font-weight);
 
-        @include base;
+        @include typography('base',var(--base-regular-font-weight), var(--color-gray-800));
       }
 
       &-subtitle {
         margin-top: 48px;
-        color: var(--color-gray-900);
-        font-weight: var(--headings-h3-bold-font-weight);
 
-        @include headings-h3;
+        @include typography('headings-h3',var(--headings-h3-bold-font-weight), var(--color-gray-900));
       }
 
       &-items {
@@ -55,10 +48,8 @@
         .about-course__content-item {
           position: relative;
           padding-left: 32px;
-          color: var(--color-gray-800);
-          font-weight: var(--base-regular-font-weight);
 
-          @include base;
+          @include typography('base',var(--base-regular-font-weight), var(--color-gray-800));
 
           &:after {
             position: absolute;
@@ -91,28 +82,22 @@
 
         .about-course__sidebar-item {
           &__attribut {
-            color: var(--color-gray-900);
             letter-spacing: var(--letter-spacing-xxl);
             text-transform: uppercase;
-            font-weight: var(--post-bold-font-weight);
 
-            @include post;
+            @include typography('post',var(--post-bold-font-weight), var(--color-gray-900));
           }
 
           &__details {
-            color: var(--color-primary);
             margin-top: 4px;
-            font-weight: var(--headings-h4-bold-font-weight);
 
-            @include headings-h4;
+            @include typography('headings-h4',var(--headings-h4-bold-font-weight), var(--color-primary));
           }
 
           &__description {
             margin-top: 8px;
-            color: var(--color-gray-700);
-            font-weight: var(--base-regular-font-weight);
 
-            @include base;
+            @include typography('base',var(--base-regular-font-weight), var(--color-gray-700));
           }
         }
       }

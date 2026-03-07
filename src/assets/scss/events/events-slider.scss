@@ -79,10 +79,7 @@
       }
 
       &-title {
-        color: var(--color-gray-900);
-        font-weight: var(--headings-h3-bold-font-weight);
-
-        @include headings-h3;
+        @include typography('headings-h3',var(--headings-h3-bold-font-weight), var(--color-gray-900));
       }
     }
   }

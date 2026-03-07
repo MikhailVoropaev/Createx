@@ -16,11 +16,9 @@
 
       &-text {
         margin-top: 24px;
-        color: var(--color-white);
         opacity: 0.6;
-        font-weight: var(--extrasmall-regular-font-weight);
 
-        @include extrasmall;
+        @include typography('extrasmall',var(--extrasmall-regular-font-weight), var(--color-white));
       }
 
       &-socials {
@@ -47,12 +45,10 @@
 
     .footer__nav {
       &-title {
-        color: var(--color-white);
-        letter-spacing: 0.06em;
+        letter-spacing: var(--letter-spacing-xl);
         text-transform: uppercase;
-        font-weight: var(--headings-h6-bold-font-weight);
 
-        @include headings-h6;
+        @include typography('headings-h6',var(--headings-h6-bold-font-weight), var(--color-white));
       }
 
       &-items {
@@ -95,12 +91,10 @@
 
         .footer__nav-item {
           display: inline-block;
-          color: var(--color-white);
-          font-weight: var(--base-regular-font-weight);
           opacity: 0.6;
           transition: opacity 0.4s;
 
-          @include base;
+          @include typography('base',var(--base-regular-font-weight), var(--color-white));
 
           &:hover {
             opacity: 1;
@@ -122,13 +116,11 @@
             border-radius: 4px;
             background: var(--background-footer-form-input);
             width: 100%;
-            color: var(--color-white);
             opacity: 0.6;
-            font-weight: var(--extrasmall-regular-font-weight);
             padding: 9px 12px;
             transition: border 0.4s, opacity 0.4s;
 
-            @include extrasmall;
+            @include typography('extrasmall',var(--extrasmall-regular-font-weight), var(--color-white));
           }
 
           .footer__form-btn {
@@ -166,11 +158,9 @@
         }
 
         .footer__item-text {
-          color: var(--color-white);
-          font-weight: var(--extraextrasmall-regular-font-weight);
           margin-top: 12px;
 
-          @include extraextrasmall;
+          @include typography('extraextrasmall',var(--extraextrasmall-regular-font-weight), var(--color-white));
         }
       }
     }
@@ -190,10 +180,8 @@
         display: flex;
         align-items: center;
         gap: 4px;
-        color: var(--color-white);
-        font-weight: var(--extrasmall-regular-font-weight);
 
-        @include extrasmall;
+        @include typography('extrasmall',var(--extrasmall-regular-font-weight), var(--color-white));
 
         &-icon {
           color: var(--color-primary);
@@ -201,12 +189,10 @@
       }
 
       .copyright__button {
-        color: var(--color-white);
         opacity: 0.6;
-        font-weight: var(--small-bold-font-weight);
         transition: opacity 0.4s;
 
-        @include small;
+        @include typography('small',var(--small-bold-font-weight), var(--color-white));
 
         &:hover {
           opacity: 1;

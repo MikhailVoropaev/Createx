@@ -49,10 +49,8 @@
 
       &-text {
         margin-top: 48px;
-        color: var(--color-gray-800);
-        font-weight: var(--base-regular-font-weight);
 
-        @include base;
+        @include typography('base',var(--base-regular-font-weight), var(--color-gray-800));
       }
 
       &-company {

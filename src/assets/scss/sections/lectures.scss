@@ -38,28 +38,21 @@
 
         &__number {
           margin-right: 20px;
-          color: var(--color-primary);
-          letter-spacing: 0.02em;
-          font-weight: var(--display-h4-black-font-weight);
+          letter-spacing: var(--letter-spacing-l);
 
-          @include display-h4;
+          @include typography('display-h4',var(--display-h4-black-font-weight), var(--color-primary));
         }
 
         &__box {
           .lectures__item-date__month {
-            color: var(--color-gray-900);
-            font-weight: var(--lead-bold-font-weight);
-
-            @include lead;
+            @include typography('lead',var(--lead-bold-font-weight), var(--color-gray-900));
           }
 
           .lectures__item-date__time {
             margin-top: 4px;
-            color: var(--color-gray-700);
-            font-weight: var(--base-regular-font-weight);
             white-space: nowrap;
 
-            @include base;
+            @include typography('base',var(--base-regular-font-weight), var(--color-gray-700));
           }
         }
       }
@@ -79,18 +72,13 @@
 
         &__info {
           &-title {
-            color: var(--color-gray-900);
-            font-weight: var(--lead-bold-font-weight);
-
-            @include lead;
+            @include typography('lead',var(--lead-bold-font-weight), var(--color-gray-900));
           }
 
           &-subtitle {
             margin-top: 4px;
-            color: var(--color-gray-400);
-            font-weight: var(--base-regular-font-weight);
 
-            @include base;
+            @include typography('base',var(--base-regular-font-weight), var(--color-gray-400));
           }
         }
       }
@@ -110,10 +98,7 @@
     }
 
     &-text {
-      color: var(--color-gray-900);
-      font-weight: var(--headings-h3-bold-font-weight);
-
-      @include headings-h3;
+      @include typography('headings-h3',var(--headings-h3-bold-font-weight), var(--color-gray-900));
     }
   }
 }

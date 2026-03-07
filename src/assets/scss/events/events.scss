@@ -20,11 +20,9 @@
   }
 
   &-item {
-    color: var(--color-gray-800);
-    font-weight: var(--base-bold-font-weight);
     transition: color 0.3s;
 
-    @include base;
+    @include typography('base',var(--base-bold-font-weight), var(--color-gray-800));
 
     &:hover {
       color: var(--color-primary);

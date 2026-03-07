@@ -34,13 +34,11 @@
 
       .requirements__item {
         padding-left: 36px;
-        color: var(--color-gray-800);
-        font-weight: var(--lead-bold-font-weight);
         position: relative;
         cursor: default;
         transition: scale, color .3s;
 
-        @include lead;
+        @include typography('lead',var(--lead-bold-font-weight), var(--color-gray-800));
 
         &:after {
           content: "";

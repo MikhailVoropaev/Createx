@@ -5,21 +5,17 @@
   padding: 100px 0 120px;
 
   &-subtitle {
-    color: var(--color-primary);
     letter-spacing: var(--letter-spacing-xl);
     text-transform: uppercase;
-    font-weight: var(--headings-h6-bold-font-weight);
     margin-bottom: 12px;
 
-    @include headings-h6;
+    @include typography('headings-h6',var(--headings-h6-bold-font-weight), var(--color-primary));
   }
 
   &-title {
     max-width: 1020px;
     margin: 0 auto;
-    color: var(--color-gray-900);
-    font-weight: var(--headings-h1-black-font-weight);
 
-    @include headings-h1;
+    @include typography('headings-h1',var(--headings-h1-black-font-weight), var(--color-gray-900));
   }
 }
