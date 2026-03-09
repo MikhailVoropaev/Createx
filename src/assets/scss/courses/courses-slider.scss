@@ -1,33 +1,40 @@
 @use "../mixins" as *;
 
-.featured {
-  margin-top: 180px;
+.courses-slider {
+  margin: 120px 0 180px;
 
-  @include width-tab {
-    margin-top: 120px;
+  @include width-tab-sm {
+    margin: 80px 0;
   }
 
-  &__cards {
-    margin-top: 60px;
-    display: grid;
-    grid-template: repeat(3, 1fr)/ repeat(2, 1fr);
-    gap: 30px;
+  &__headings {
+    text-align: left;
+  }
 
-    @include width-tab-xl {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
+  &__items {
+    margin-top: 60px;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+
+    .featured__card--prev {
+      display: none;
+    }
+    .featured__card--next{
+      display: none;
+    }
+    .featured__card--active {
+      display: inline-flex;
       align-items: center;
     }
 
     .featured__card {
-      display: inline-flex;
-      align-items: center;
+      border: 1px solid var(--color-gray-300);
       border-radius: 4px;
       max-width: 600px;
       height: 214px;
       width: 100%;
-      border: 1px solid var(--color-gray-300);
+
 
       &:hover {
         box-shadow: var(--box-shadow-featured-card);
@@ -74,6 +81,27 @@
             font-weight: var(--large-bold-font-weight);
           }
         }
+      }
+    }
+  }
+
+  &__explore {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    @include width-tab-sm {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &-text {
+      @include typography('headings-h3',var(--headings-h3-bold-font-weight), var(--color-gray-900));
+
+      @include width-tab-sm {
+        text-align: center;
       }
     }
   }
