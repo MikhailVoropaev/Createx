@@ -1,5 +1,6 @@
 @use "bereakpoints" as *;
 @use "typography" as *;
+@use "sass:map";
 
 @mixin width-desk {
   @media (max-width: $desk) {
@@ -96,7 +97,7 @@ $typography-classes: (
 }
 
 @mixin typography($class, $font-weight, $color: null) {
-  @if map-has-key($typography-classes, $class) {
+  @if map.has-key($typography-classes, $class) {
     @extend .#{$class};
   } @else {
     @error "Типография #{$class} не найдена в $typography-classes";
