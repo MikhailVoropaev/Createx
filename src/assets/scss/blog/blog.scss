@@ -1,0 +1,121 @@
+@use "../mixins" as *;
+
+.blog-layout {
+  margin-top: 60px;
+
+  &__filter {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-buttons {
+      display: flex;
+      gap: 12px;
+
+      .blog-layout__filter-button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 20px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        transition: color .3s, background-color .3s;
+
+        @include typography('base', var(--base-bold-font-weight), var(--color-gray-600));
+
+        &__icon {
+          width: 16px;
+          height: 16px;
+          line-height: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &:hover {
+          color: var(--color-primary);
+          border: 1px solid var(--color-primary);
+        }
+      }
+    }
+
+    &-category {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      &__label {
+        @include typography('base', var(--base-bold-font-weight), var(--color-gray-800));
+      }
+
+      &-customSelect {
+        position: relative;
+
+        .blog-layout__filter-category-customSelect__select {
+          display: block;
+          box-sizing: border-box;
+          border: 1px solid var(--color-gray-400);
+          background-color: transparent;
+          border-radius: 4px;
+          padding: 12px 16px;
+          outline: none;
+          appearance: none;
+          position: relative;
+          z-index: 1;
+          overflow-x: auto;
+          cursor: pointer;
+
+          &-option {
+            @include typography('small',var(--small-regular-font-weight), var(--color-gray-800));
+          }
+
+          &:open {
+            &~.blog-layout__filter-category-customSelect__select-arrow {
+              transform: rotate(180deg);
+            }
+          }
+        }
+
+        .blog-layout__filter-category-customSelect__select-arrow {
+          position: absolute;
+          top: calc(50% - 8px);
+          right: 16px;
+          user-select: none;
+          transform: rotate(0deg);
+          transition: all 0.4s;
+        }
+      }
+
+      .word__list {
+        width: 160px;
+      }
+    }
+
+    &-search {
+      position: relative;
+
+      &__input {
+        max-width: 285px;
+        width: 100%;
+        padding:  12px 16px;
+        outline: none;
+        border: 1px solid var(--color-gray-400);
+        border-radius: 4px;
+
+        &::placeholder {
+          @include typography('small',var(--small-regular-font-weight), var(--color-gray-600));
+        }
+      }
+
+      &__button {
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        width: 16px;
+        height: 16px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
