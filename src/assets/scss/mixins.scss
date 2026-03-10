@@ -219,4 +219,9 @@ $typography-classes: (
   font-weight: 700;
 }
 
+@mixin ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
 

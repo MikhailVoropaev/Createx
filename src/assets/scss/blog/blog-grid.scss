@@ -5,19 +5,114 @@
 
   &__container {
     display: grid;
-    grid-template-columns: repeat(3, 390px); // 1fr + 1fr + 1fr = 3fr
-    grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
+    margin: 0 auto;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 60px 30px;
 
-    .item4 {
-      grid-area: 2 / 1 / 2 / 3; // строка 2, с колонки 1 по колонку 3 (не включая)
-      // или просто:
-      // grid-row: 2;
-      // grid-column: 1 / 3; // занимает колонки 1 и 2 = 66.66%
+    @include width-tab-xl {
+      gap:30px 15px;
     }
 
-    .item5 {
-      grid-area: 2 / 3; // строка 2, колонка 3 = 33.33%
+    @include width-tab {
+      grid-template-columns: 1fr;
+      max-width: 390px;
+      gap: 30px;
+    }
+
+    .blog__item {
+      &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(6), &:nth-child(7), &:nth-child(8), {
+        grid-column: span 4;
+      }
+
+      &:nth-child(4) {
+        grid-column: span 7;
+      }
+
+      &:nth-child(5) {
+        grid-column: span 5;
+      }
+
+      @include width-tab-xl {
+        &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(6), &:nth-child(7), &:nth-child(8), &:nth-child(4), &:nth-child(5) {
+          grid-column: span 6;
+        }
+      }
+
+
+
+      // Изображение
+      &-image {
+        position: relative;
+        width: 100%;
+        border-radius: 4px;
+
+        &__inner {
+          position: absolute;
+          top: 12px;
+          left: 12px;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          background: var(--color-white);
+          border-radius: 4px;
+          padding: 1px 8px;
+
+          @include typography('small',var(--small-regular-font-weight),var(--color-gray-800));
+        }
+      }
+
+      &-meta {
+        display: flex;
+        gap: 12px;
+        margin-top: 16px;
+
+        @include typography('small',null , var(--color-gray-900));
+
+        &-position {
+          font-weight: var(--small-bold-font-weight);
+        }
+
+        &__date, &__time {
+          font-weight: var(--small-regular-font-weight);
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          @include width-mob-xl {
+            gap: 4px;
+          }
+        }
+      }
+
+      &-title {
+        margin-top: 8px;
+        transition: all .4s;
+
+        @include typography('lead',var(--lead-bold-font-weight), var(--color-gray-900));
+      }
+
+      &-description {
+        margin-top: 8px;
+        transition: all .4s;
+
+        @include typography('base',var(--base-regular-font-weight), var(--color-gray-800));
+      }
+
+      &-title, &-description {
+        cursor: pointer;
+
+        @include ellipsis;
+      }
+
+      &-title--active, &-description--active {
+        text-overflow: inherit;
+        white-space: inherit;
+        overflow: inherit;
+      }
+
+      &-link {
+        margin-top: 16px;
+      }
     }
   }
 }
