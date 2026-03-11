@@ -1,0 +1,111 @@
+@use "../mixins" as *;
+
+.blog-subscribe {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include width-tab-xl {
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+      padding: 30px 15px;
+    }
+
+    .blog-subscribe__illustration {
+      max-width: 507px;
+
+      &-img {
+        width: 100%;
+      }
+    }
+
+    .blog-subscribe__content {
+      max-width: 600px;
+      width: 100%;
+
+      &-title {
+        @include typography('headings-h2',var(--headings-h2-black-font-weight), var(--color-gray-900));
+      }
+
+      &-form {
+        &__items {
+          margin-top: 48px;
+          display: flex;
+          justify-content: space-between;
+          gap: 24px;
+
+          @include width-mob-xl {
+            flex-direction: column;
+            justify-content: flex-end;
+          }
+        }
+
+        .blog-subscribe__content-form__item-input {
+          padding: 13px 16px;
+          border: 1px solid var(--color-gray-400);
+          border-radius: 4px;
+          width: 100%;
+          background: var(--color-white);
+          outline: none;
+
+          @include typography('base',var(--base-regular-font-weight), var(--color-gray-600));
+        }
+
+        &__checkbox {
+          margin-top: 24px;
+          display: flex;
+          align-items: center;
+
+          @include typography('base',var(--base-regular-font-weight), var(--color-gray-800));
+
+          &-text, &-abbreviated {
+            cursor: pointer;
+            display: inline-block;
+            color: inherit;
+            font-weight: inherit;
+
+            @include base;
+          }
+
+          &-text {
+            @include width-tab-sm {
+              display: none;
+            }
+          }
+
+          &-abbreviated {
+            display: none;
+
+            @include width-tab-sm {
+              display: inline-block;
+            }
+          }
+
+          &-input {
+            -webkit-appearance: none;
+            appearance: none;
+            display: inline-block;
+            line-height: 0;
+            border: 1px solid var(--color-primary);
+            border-radius: 4px;
+            cursor: pointer;
+            background: inherit;
+            height: 16px;
+            width: 16px;
+            margin-right: 12px;
+            transition: 0.2s;
+
+            &:checked {
+              background-color: var(--color-primary);
+              background-image: url("../../images/icons/subscribe-check.svg");
+              background-repeat: no-repeat;
+              background-position: center center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
