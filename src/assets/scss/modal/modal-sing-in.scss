@@ -1,0 +1,9 @@
+@use "../mixins" as *;
+
+.modal-sing-in {
+  display: none;
+}
+
+.modal-sing-in--active {
+  display: flex;
+}

@@ -1,0 +1,14 @@
+@use "../mixins" as *;
+
+.modal-sing-up {
+  display: none;
+
+  .modal__form {
+    overflow-y: scroll;
+    height: 200px;
+  }
+}
+
+.modal-sing-up--active {
+  display: flex;
+}

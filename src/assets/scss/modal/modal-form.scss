@@ -1,0 +1,7 @@
+@use "../mixins" as *;
+
+.modal-sing-in, .modal-sing-up {
+  padding: 48px 48px 24px;
+  flex-direction: column;
+  gap: 24px;
+}

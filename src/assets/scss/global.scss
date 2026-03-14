@@ -18,7 +18,14 @@ html, body {
 
 body {
   background: white;
+  position: relative;
 }
+
+
+.modal-bg {
+  background: var(--color-gray-900-75);
+}
+
 
 .container {
   max-width: 1260px;
