@@ -47,9 +47,9 @@ const closeModal = () => {
 
 const disableBodyScroll = () => {
   document.body.style.overflow = 'hidden';
-  document.body.style.position = 'fixed';
-  document.body.style.top = `-${window.scrollY}px`;
-  document.body.style.width = '100%';
+ // document.body.style.position = 'fixed';
+ // document.body.style.top = `-${window.scrollY}px`;
+  // document.body.style.width = '100%';
 }
 
 const enableBodyScroll = () => {
