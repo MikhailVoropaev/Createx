@@ -52,14 +52,14 @@
               Get consultation
             </button>
             <div class="header__nav-cta__auth">
-              <button class="header__nav-cta__auth-btn">
+              <button class="header__nav-cta__auth-btn header__button-logIn">
                 <img data-svg-fill="false" src="../images/icons/profile.svg" alt="Profile image">
                 Log in
               </button>
 
               <span>/</span>
 
-              <button class="header__nav-cta__auth-btn">
+              <button class="header__nav-cta__auth-btn header__button-logUp">
                 Register
               </button>
             </div>
@@ -69,6 +69,150 @@
         <button class="burger">
           <span class="burger__item"></span>
         </button>
+      </div>
+    </div>
+
+    <div class="modal modal-bg">
+      <div class="modal__container">
+
+        <button class="modal__close-btn"></button>
+
+        <!--                   SING-IN                     -->
+        <div class="modal-sing-in">
+          <h3 class="modal__title">
+            Sign in
+          </h3>
+          <p class="modal__subtitle">
+            Sign in to your account using email and password provided during registration.
+          </p>
+
+          <form class="modal__form">
+            <label class="modal__form-label" for="sing-in-modalFormEmail">
+              Email
+              <input id="sing-in-modalFormEmail" class="modal__form-label__input" type="text" placeholder="Your working email">
+            </label>
+
+            <label class="modal__form-label" for="sing-in-modalFormPass">
+              Password
+              <input id="sing-in-modalFormPass" class="modal__form-label__input" type="password" placeholder="Your password">
+              <button class="modal__form-label__button">
+                <img data-svg-fill="false" class="modal__form-label__button-icon" src="../images/modal/button-eyes.svg" alt="Password Icon">
+              </button>
+            </label>
+
+            <div class="modal__form-box">
+              <label class="modal__form-checkbox" for="sing-in-modalFormCheckbox">
+                <input id="sing-in-modalFormCheckbox" class="modal__form-checkbox__checkmark" type="checkbox">
+                Keep me signed in
+              </label>
+
+              <button class="modal__form-button">
+                Forgot password?
+              </button>
+            </div>
+          </form>
+
+          <button class="btn btn-primary btn-small modal__form-buttonSingUp">
+            Sign Up
+          </button>
+
+          <div class="modal__form-switch">
+          <span class="modal__form-switch__text">
+            Don't have an account?
+          </span>
+            <button class="modal__form-switch__buttonSingUp">
+              Sign in
+            </button>
+          </div>
+        </div>
+        <!--                                                    -->
+
+
+
+        <!--                  SING-UP                            -->
+        <div class="modal-sing-up">
+          <h3 class="modal__title">
+            Sign up
+          </h3>
+          <p class="modal__subtitle">
+            Registration takes less than a minute but gives you full control over your studying.
+          </p>
+
+          <form class="modal__form">
+            <label class="modal__form-label" for="sing-up-modalFormName">
+              Full Name
+              <input id="sing-up-modalFormName" class="modal__form-label__input" type="text" placeholder="Your full name">
+            </label>
+
+            <label class="modal__form-label" for="sing-up-modalFormEmail">
+              Email
+              <input id="sing-up-modalFormEmail" class="modal__form-label__input" type="text" placeholder="Your working email">
+            </label>
+
+            <label class="modal__form-label" for="sing-up-modalFormPass">
+              Password
+              <input id="sing-up-modalFormPass" class="modal__form-label__input" type="password" placeholder="Your password">
+              <button class="modal__form-label__button">
+                <img data-svg-fill="false" class="modal__form-label__button-icon" src="../images/modal/button-eyes.svg" alt="Password Icon">
+              </button>
+            </label>
+
+            <label class="modal__form-label" for="sing-up-modalFormConfirmPass">
+              Confirm Password
+              <input id="sing-up-modalFormConfirmPass" class="modal__form-label__input" type="password" placeholder="Your password">
+              <button class="modal__form-label__button">
+                <img data-svg-fill="false" class="modal__form-label__button-icon" src="../images/modal/button-eyes.svg" alt="Password Icon">
+              </button>
+            </label>
+
+            <div class="modal__form-box">
+              <label class="modal__form-checkbox" for="sing-up-modalFormCheckbox">
+                <input id="sing-up-modalFormCheckbox" class="modal__form-checkbox__checkmark" type="checkbox">
+                Remember me
+              </label>
+            </div>
+          </form>
+
+          <button class="btn btn-primary btn-small modal__form-buttonSingIn">
+            Sign in
+          </button>
+
+          <div class="modal__form-switch">
+          <span class="modal__form-switch__text">
+            Already have an account?
+          </span>
+            <button class="modal__form-switch__buttonSingIn">
+              Sign up
+            </button>
+          </div>
+        </div>
+        <!--                                                      -->
+
+
+
+
+        <hr class="modal-divider">
+
+
+        <div class="modal__socials">
+          <p class="modal__socials-title">
+            Or sign in with
+          </p>
+          <div class="modal__socials-items">
+            <a class="modal__socials-item" href="#">
+              <img data-svg-fill="false" class="modal__socials-item__icon" src="../images/modal/modal-icon-facebook.svg" alt="Facebook Icon">
+            </a>
+            <a class="modal__socials-item" href="#">
+              <img data-svg-fill="false" class="modal__socials-item__icon" src="../images/modal/modal-icon-google.svg" alt="Google Icon">
+            </a>
+            <a class="modal__socials-item" href="#">
+              <img data-svg-fill="false" class="modal__socials-item__icon" src="../images/modal/modal-icon-twitter.svg" alt="Twitter Icon">
+            </a>
+            <a class="modal__socials-item" href="#">
+              <img data-svg-fill="false" class="modal__socials-item__icon" src="../images/modal/modal-icon-linked-in.svg" alt="Linked-In Icon">
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -603,7 +747,7 @@
       </div>
     </div>
   </footer>
-
+  <script type="module" src="../js/modalForm.js"></script>
   <script type="module" src="../js/main.js"></script>
   <script type="module" src="../js/header.js"></script>
 </body>
