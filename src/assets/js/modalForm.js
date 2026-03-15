@@ -1,10 +1,6 @@
-const headerBtnLogIn = document.querySelector('.header__button-logIn');
-const headerBtnLogUp = document.querySelector('.header__button-logUp');
 const modalForm = document.querySelector('.modal');
 const modalSingUp = document.querySelector('.modal-sing-up');
 const modalSingIn = document.querySelector('.modal-sing-in');
-const formSingInBtn = document.querySelector('.modal__form-switch__buttonSingIn');
-const formSingUpBtn = document.querySelector('.modal__form-switch__buttonSingUp');
 
 const onClickLogIn = () => {
   modalForm.classList.add('modal--active');
@@ -32,54 +28,18 @@ const onClickFormSingUp = () => {
   modalSingUp.classList.add('modal-sing-up--active');
 }
 
-formSingUpBtn.onclick = onClickFormSingUp;
-formSingInBtn.onclick = onClickFormSingIn;
+const onClickOutsideModalForm = (e) => {
+  if (!e.target.closest('.modal__container') || e.target.closest('.modal__close-btn')) {
+    modalSingUp.classList.remove('modal-sing-up--active');
+    modalSingIn.classList.remove('modal-sing-in--active');
+    modalForm.classList.remove('modal--active');
+  }
+}
 
-headerBtnLogIn.onclick = onClickLogIn;
-headerBtnLogUp.onclick = onClickLogUp;
+modalForm.addEventListener('click', onClickOutsideModalForm);
 
+document.querySelector('.modal__form-switch__buttonSingUp').onclick = onClickFormSingUp;
+document.querySelector('.modal__form-switch__buttonSingIn').onclick = onClickFormSingIn;
 
-
-
-
-
-
-
-
-// const onClickHeaderBtnLogIn = () => {
-//   modalForm.classList.add('modal--active');
-//   modalSingIn.classList.add('modal-sing-in--active');
-//
-//   const formSingUpBtn = document.querySelector('.modal__form-switch__buttonSingUp');
-//   const formSingInBtn = document.querySelector('.modal__form-switch__buttonSingIn');
-//
-//   const onClickSingUpBtn = () => {
-//     if (modalSingUp.classList.contains('modal-sing-up--active'))
-//       return;
-//
-//     modalSingIn.classList.remove('modal-sing-in--active');
-//     modalSingUp.classList.add('modal-sing-up--active');
-//   }
-//
-//   const onClickSingInBtn = () => {
-//     if (modalSingIn.classList.contains('modal-sing-in--active'))
-//       return;
-//
-//     modalSingUp.classList.remove('modal-sing-up--active');
-//     modalSingIn.classList.add('modal-sing-in--active');
-//   }
-//
-//   formSingInBtn.onclick = onClickSingInBtn;
-//   formSingUpBtn.onclick = onClickSingUpBtn;
-// }
-
-
-
-
-
-
-
-
-
-
-
+document.querySelector('.header__button-logIn').onclick = onClickLogIn;
+document.querySelector('.header__button-logUp').onclick = onClickLogUp;
