@@ -1,3 +1,5 @@
+import "./validationModalForm.js";
+
 const modalForm = document.querySelector('.modal');
 const modalSingUp = document.querySelector('.modal-sing-up');
 const modalSingIn = document.querySelector('.modal-sing-in');

@@ -67,12 +67,22 @@
 
         @include typography('small', var(--small-regular-font-weight), var(--color-gray-800));
 
+        .error-span {
+          display: block;
+          text-transform: lowercase;
+          color: var(--color-danger);
+        }
+
         &__input {
           width: 100%;
           padding: 12px 16px;
           border: 1px solid var(--color-gray-400);
           border-radius: 4px;
           outline: none;
+
+          &.error {
+            border: 1px solid var(--color-primary) ;
+          }
         }
 
         &__button {
