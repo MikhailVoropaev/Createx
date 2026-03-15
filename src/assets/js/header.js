@@ -18,6 +18,21 @@ document.addEventListener("DOMContentLoaded", () => {
     headerContainer.classList.remove('burger--active');
   }
 
+  const scrollOutside = () => {
+    const headerNav = document.querySelector('.header__nav');
+    const stylesHeaderNav = getComputedStyle(headerNav);
+
+    if (headerContainer.classList.contains('burger--active') && parseInt(stylesHeaderNav.top) === -20) {
+      setTimeout(() => {
+        headerContainer.classList.remove('burger--active');
+      }, 500);
+    }
+  }
+
+
+  document.addEventListener('scroll', scrollOutside);
   burger.addEventListener('click', toggleHamburger);
   document.body.addEventListener('click', clickOutside);
 });
+
+

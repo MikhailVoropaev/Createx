@@ -1,12 +1,16 @@
 @use "../mixins" as *;
 
 .animate__play {
+
   &:hover {
     .play__illustration-img {
-      animation: rotateIn 10s linear infinite alternate;
-      filter: drop-shadow(0 30px 15px rgba(0, 0, 0, 0.3));
+      //animation: rotateIn 10s linear infinite alternate;
+
     }
   }
+}
+.play__illustration-img {
+  filter: drop-shadow(0 30px 15px rgba(0, 0, 0, 0.3));
 }
 
 .play {

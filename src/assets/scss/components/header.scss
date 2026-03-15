@@ -24,29 +24,8 @@
     }
 
     .header__nav {
-      display: flex;
-      flex-direction: column;
-      top: 0;
-      left: 0;
-      z-index: 2;
-      background: var(--color-header-nav-background);
-      transition: all 0.2s linear;
-      padding: 50px 0;
-      backdrop-filter: blur(5px);
-      border-radius: 0 0 40px 40px;
-
-      &-menu {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
-
-      &-cta {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column-reverse;
-        gap: 16px;
-      }
+      top: -20px;
+      transition: all .5s linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%)
     }
   }
 
@@ -59,6 +38,7 @@
     height: 20px;
     width: 20px;
     position: relative;
+    cursor: pointer;
 
     @include width-tab-xl {
       display: block;
@@ -71,6 +51,7 @@
       height: 3px;
       background: var(--color-gray-600);
       width: 15px;
+      cursor: pointer;
 
       &:after, &:before {
         content: "";
@@ -98,16 +79,31 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    transition: all .5s linear;
 
     @include width-tab-xl {
-      position: fixed;
-      top: -100%;
+      position: absolute;
+      top: -100vh;
+      display: flex;
+      flex-direction: column;
+      left: 0;
+      z-index: 2;
+      background: var(--color-header-nav-background);
+      padding: 50px 0;
+      backdrop-filter: blur(5px);
+      border-radius: 0 0 40px 40px;
     }
 
     &-menu {
       display: flex;
       align-items: center;
       gap: 40px;
+
+      @include width-tab-xl {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
 
       &__item {
         &-link {
@@ -124,6 +120,13 @@
       display: flex;
       align-items: center;
       gap: 36px;
+
+      @include width-tab-xl {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 16px;
+      }
 
       &__auth {
         display: flex;
