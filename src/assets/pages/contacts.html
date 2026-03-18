@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1" />
   <title>Contacts</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../scss/style.scss">
+  <script src="https://api-maps.yandex.ru/v3/?apikey=c41638d3-514b-4721-80b3-080e694baa3c&lang=ru_RU"></script>
 </head>
 <body>
   <header class="header">
@@ -217,6 +218,84 @@
     </div>
   </header>
 
+  <section class="contacts">
+    <div class="container contacts__container">
+      <div class="contacts__connection">
+        <div class="contacts__heading">
+          <p class="headings__subtitle">
+            Contact info
+          </p>
+          <h2 class="headings__title">
+            Get in touch
+          </h2>
+        </div>
+
+        <div class="contacts__connection-communication">
+          <div class="contacts__connection-communication__item">
+            <span class="contacts__connection-communication__item-title">
+              Talk to us:
+            </span>
+            <a class="contacts__connection-communication__item-link" href="mailto:hello@createx.com">
+              hello@createx.com
+            </a>
+          </div>
+
+          <div class="contacts__connection-communication__item">
+            <span class="contacts__connection-communication__item-title">
+              Call us:
+            </span>
+            <a class="contacts__connection-communication__item-link" href="tel:4055550128">
+              (405) 555-0128
+            </a>
+          </div>
+
+          <div class="contacts__connection-communication__item">
+            <span class="contacts__connection-communication__item-title">
+              Address:
+            </span>
+            <a class="contacts__connection-communication__item-link" href="https://yandex.ru/maps/geo/new_jersey/2240118721/?ll=-74.741698%2C40.214057&z=13.6">
+              2464 Royal Ln. Mesa, New Jersey 45463, USA
+            </a>
+          </div>
+        </div>
+
+        <div class="contacts__connection-socials">
+          <h3 class="contacts__connection-socials__title">
+            Follow us:
+          </h3>
+          <div class="contacts__connection-socials__items">
+            <a href="#" class="contacts__connection-socials__item">
+              <img data-svg-fill="false" class="contacts__connection-socials__item-icon" src="../images/contacts/socials/facebook.svg" alt="Facebook Icon">
+            </a>
+
+            <a href="#" class="contacts__connection-socials__item">
+              <img data-svg-fill="false" class="contacts__connection-socials__item-icon" src="../images/contacts/socials/twitter.svg" alt="Twitter Icon">
+            </a>
+
+            <a href="#" class="contacts__connection-socials__item">
+              <img data-svg-fill="false" class="contacts__connection-socials__item-icon" src="../images/contacts/socials/youtube.svg" alt="Youtube Icon">
+            </a>
+
+            <a href="#" class="contacts__connection-socials__item">
+              <img data-svg-fill="false" class="contacts__connection-socials__item-icon" src="../images/contacts/socials/telegram.svg" alt="Telegram Icon">
+            </a>
+
+            <a href="#" class="contacts__connection-socials__item">
+              <img data-svg-fill="false" class="contacts__connection-socials__item-icon" src="../images/contacts/socials/instagram.svg" alt="Instagram Icon">
+            </a>
+
+            <a href="#" class="contacts__connection-socials__item">
+              <img data-svg-fill="false" class="contacts__connection-socials__item-icon" src="../images/contacts/socials/linkedin.svg" alt="LinkedIn Icon">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div id="contacts-map" class="contacts__map">
+      </div>
+    </div>
+  </section>
+
 
 
 
@@ -336,8 +415,7 @@
       </div>
     </div>
   </footer>
-
-
+  <script src="../js/map.js"></script>
   <script type="module" src="../js/modalForm.js"></script>
   <script type="module" src="../js/main.js"></script>
   <script type="module" src="../js/header.js"></script>

@@ -58,5 +58,3 @@ if (slidesBox && slide.length > 0 && prevBtn && nextBtn) {
     });
   });
 }
-
-
