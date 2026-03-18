@@ -1,10 +1,10 @@
 @use "../mixins" as *;
 
 .feedback {
-  margin-top: 180px;
+  margin: 180px 0;
 
   @include width-tab {
-    margin-top: 80px;
+    margin: 80px 0;
   }
 
   &__container {
