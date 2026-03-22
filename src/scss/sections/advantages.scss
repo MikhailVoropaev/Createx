@@ -46,7 +46,12 @@
     }
   }
 
-  &__content {
+
+  .advantages__description-block {
+    display: none;
+  }
+
+  .advantages__description-block--active {
     display: flex;
     justify-content: space-between;
     align-items: center;

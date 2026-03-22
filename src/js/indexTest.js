@@ -18,27 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
   buttonVideoModal.addEventListener('click', toggleModal);
 })
 
-
-document.addEventListener("DOMContentLoaded", () => {
-  const advantagesListItems = document.querySelectorAll('.advantages__list-item');
-  const set = new Set();
-
-  advantagesListItems.forEach(advantage => {
-    advantage.addEventListener('mouseenter', function () {
-      if (!this.classList.contains('advantages__list-item--active')) {
-        this.classList.add('advantages__list-item--active');
-
-        if (set.size === 1) {
-          Array.from(set)[0].classList.remove('advantages__list-item--active');
-          set.clear();
-        }
-
-        set.add(this);
-      }
-    })
-  })
-})
-
 document.addEventListener("DOMContentLoaded", () => {
   const teamContainer = document.querySelector('.team');
   const sliderBtnPrev = teamContainer.querySelector(".slider-control-prev");
