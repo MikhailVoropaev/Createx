@@ -110,6 +110,7 @@
     .contacts__map {
       width: 705px;
       height: 412px;
+      cursor: pointer;
 
       @include width-desk {
         width: 500px;
