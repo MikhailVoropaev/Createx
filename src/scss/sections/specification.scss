@@ -2,7 +2,8 @@
 
 
 .specification {
-  margin-top: 180px;
+  //padding-top: 180px;
+  padding-top: calc(var(--spacings) * 2);
 
   @include width-tab-xl {
     margin-top: 120px;
